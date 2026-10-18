@@ -1,0 +1,130 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/amnweb/yasb/main/schema.json
+# For more information, visit https://github.com/amnweb/yasb/wiki
+
+watch_stylesheet: true
+watch_config: true
+system_colors: false
+debug: false
+update_check: true
+bars:
+  primary-bar:
+    enabled: true
+    style: "adaptive"
+    screens:
+    - '*'
+    class_name: yasb-bar
+    alignment:
+      position: top
+      align: center
+    animation:
+      enabled: true
+      duration: 300
+    blur_effect:
+      enabled: false
+      round_corners: true
+    window_flags:
+      always_on_top: false
+      windows_app_bar: true
+    dimensions:
+      width: 100%
+      height: 35
+    padding:
+      top: 0
+      left: 0
+      bottom: 0
+      right: 0
+    widgets:
+      left:
+      - home
+      center:
+      - clock
+      - media
+
+widgets:
+  home:
+    type: yasb.home.HomeWidget
+    options:
+      label: "<span>家</span>"
+      system_menu: false
+      power_menu: true
+      blur: false
+      round_corners: true
+      round_corners_type: normal
+      border_color: System
+      alignment: left
+      offset_left: -5
+
+  clock:
+    type: yasb.clock.ClockWidget
+    options:
+      label: '{%a, %d %b %H:%M}<span>{alarm}</span>'
+      label_alt: '{%a, %d %b %H:%M}'
+      timezones: []
+      calendar:
+        blur: false
+        round_corners: true
+        alignment: center
+        direction: down
+        offset_left: 0
+        extended: false
+        show_years: true
+        show_holidays: false
+        show_week_numbers: true
+      callbacks:
+        on_left: toggle_calendar
+
+  media:
+    type: yasb.media.MediaWidget
+    options:
+      label: "{title}"
+      label_alt: "{artist}"
+      separator: " - "
+      hide_empty: true
+      class_name: "now-playing"
+      max_field_size:
+        label: 22
+        label_alt: 28
+        truncate_whole_label: true
+      show_thumbnail: true
+      controls_only: false
+      controls_left: false
+      controls_hide: false
+      thumbnail_alpha: 100
+      thumbnail_padding: 8
+      thumbnail_corner_radius: 50
+      symmetric_corner_radius: true
+      thumbnail_edge_fade: false
+      icons:
+        prev_track: "\ue892"
+        next_track: "\ue893"
+        play: "\ue768"
+        pause: "\ue769"
+      callbacks:
+        on_left: "toggle_label"
+        on_middle: "toggle_play_pause"
+        on_right: "toggle_media_menu"
+      media_menu:
+        blur: true
+        round_corners: true
+        round_corners_type: normal
+        border_color: "#ffc04d"
+        alignment: center
+        direction: down
+        offset_top: 8
+        offset_left: 0
+        thumbnail_corner_radius: 8
+        thumbnail_size: 120
+        max_title_size: 60
+        max_artist_size: 20
+        max_source_size: 16
+        show_source: true
+        show_volume_slider: true
+      scrolling_label:
+        enabled: true
+        update_interval_ms: 33
+        style: left
+        separator: "   •   "
+        label_padding: 0
+        always_scroll: false
+      progress_bar:
+        enabled: false

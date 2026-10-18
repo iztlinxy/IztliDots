@@ -1,0 +1,459 @@
+2026-10-16 17:47:15,475 [INFO] [MainThread] [root/log.py:103]: YASB v2.0.7
+2026-10-16 17:47:15,475 [INFO] [CLIPipeServer] [cli_server/cli_server.py:216]: CLI server started v1.1.7
+2026-10-16 17:47:15,476 [INFO] [MainThread] [cli_server/cli_server.py:106]: Log pipe server started
+2026-10-16 17:48:50,656 [INFO] [MainThread] [root/welcome.py:867]: Created config file at C:\Users\saura\ProjectsIztli\IztliDots\config.yaml
+2026-10-16 17:48:50,657 [INFO] [MainThread] [root/welcome.py:876]: Created styles file at C:\Users\saura\ProjectsIztli\IztliDots\styles.css
+2026-10-16 17:48:51,597 [INFO] [MainThread] [root/service.py:52]: AudioOutputService starting...
+2026-10-16 17:48:51,907 [INFO] [MainThread] [root/bar_manager.py:103]: Starting WindowsNotificationEventListener...
+2026-10-16 17:48:51,909 [INFO] [MainThread] [root/watcher.py:65]: Watching directory: c:\users\saura\projectsiztli\iztlidots
+2026-10-16 17:48:51,909 [INFO] [MainThread] [root/watcher.py:104]: Created file watcher
+2026-10-16 17:48:51,964 [INFO] [MainThread] [root/update_service.py:434]: Background update checker started
+2026-10-16 17:48:51,990 [INFO] [Dummy-6] [root/windows_notification.py:161]: Notification service started (WNF_SHEL_NOTIFICATION_TOTAL)
+2026-10-16 18:14:41,515 [ERROR] [MainThread] [root/config.py:99]: The config file 'C:\Users\saura\ProjectsIztli\IztliDots\config.yaml' contains validation errors. Please fix:
+bars:
+  primary-bar:
+    position:
+    - Extra inputs are not permitted
+
+2026-10-16 18:15:08,072 [ERROR] [MainThread] [root/config.py:99]: The config file 'C:\Users\saura\ProjectsIztli\IztliDots\config.yaml' contains validation errors. Please fix:
+bars:
+  primary-bar:
+    position:
+    - Extra inputs are not permitted
+
+2026-10-16 18:15:31,915 [INFO] [MainThread] [root/controller.py:21]: Reloading Application because of config change.
+2026-10-16 18:15:32,029 [INFO] [MainThread] [cli_server/cli_server.py:114]: Log pipe server stopped
+2026-10-16 18:15:32,035 [INFO] [MainThread] [root/bar_manager.py:93]: Successfully loaded updated config and re-initialised all bars.
+2026-10-16 18:15:32,309 [INFO] [MainThread] [root/bar_manager.py:119]: Stopping WindowsNotificationEventListener...
+2026-10-16 18:15:32,309 [INFO] [Dummy-6] [root/windows_notification.py:97]: Notification service stopped
+2026-10-16 18:15:32,508 [INFO] [MainThread] [root/log.py:103]: YASB v2.0.7
+2026-10-16 18:15:32,509 [INFO] [CLIPipeServer] [cli_server/cli_server.py:216]: CLI server started v1.1.7
+2026-10-16 18:15:32,509 [INFO] [MainThread] [cli_server/cli_server.py:106]: Log pipe server started
+2026-10-16 18:15:32,579 [INFO] [MainThread] [windows_desktop_service/com.py:130]: Virtual desktop COM ready (tier 26100, build 26300)
+2026-10-16 18:15:32,584 [INFO] [MainThread] [windows_desktop_service/notification.py:163]: Registered for virtual desktop notifications (cookie=10)
+2026-10-16 18:15:34,038 [INFO] [MainThread] [root/service.py:52]: AudioOutputService starting...
+2026-10-16 18:15:34,720 [WARNING] [MainThread] [root/widget_builder.py:36]: Ignoring construction of invalid widget 'media'
+2026-10-16 18:15:34,735 [INFO] [MainThread] [root/bar_manager.py:103]: Starting SystemEventListener...
+2026-10-16 18:15:34,735 [ERROR] [MainThread] [root/widget_builder.py:114]: Failed to validate widget(s) due to invalid options  - media
+      controls_left:
+      - Input should be a valid boolean
+      controls_right:
+      - Extra inputs are not permitted
+      
+2026-10-16 18:15:34,748 [INFO] [MainThread] [root/watcher.py:65]: Watching directory: c:\users\saura\projectsiztli\iztlidots
+2026-10-16 18:15:34,748 [INFO] [MainThread] [root/watcher.py:104]: Created file watcher
+2026-10-16 18:16:18,477 [INFO] [MainThread] [root/controller.py:21]: Reloading Application because of config change.
+2026-10-16 18:16:18,584 [INFO] [MainThread] [cli_server/cli_server.py:114]: Log pipe server stopped
+2026-10-16 18:16:18,590 [INFO] [MainThread] [root/bar_manager.py:93]: Successfully loaded updated config and re-initialised all bars.
+2026-10-16 18:16:18,603 [INFO] [MainThread] [root/bar_manager.py:119]: Stopping SystemEventListener...
+2026-10-16 18:16:18,610 [INFO] [MainThread] [windows_desktop_service/notification.py:171]: Unregistered virtual desktop notifications (cookie=10)
+2026-10-16 18:16:19,001 [INFO] [MainThread] [root/log.py:103]: YASB v2.0.7
+2026-10-16 18:16:19,001 [INFO] [CLIPipeServer] [cli_server/cli_server.py:216]: CLI server started v1.1.7
+2026-10-16 18:16:19,002 [INFO] [MainThread] [cli_server/cli_server.py:106]: Log pipe server started
+2026-10-16 18:16:19,067 [INFO] [MainThread] [windows_desktop_service/com.py:130]: Virtual desktop COM ready (tier 26100, build 26300)
+2026-10-16 18:16:19,071 [INFO] [MainThread] [windows_desktop_service/notification.py:163]: Registered for virtual desktop notifications (cookie=11)
+2026-10-16 18:16:19,485 [INFO] [MainThread] [root/service.py:52]: AudioOutputService starting...
+2026-10-16 18:16:19,727 [INFO] [MainThread] [root/bar_manager.py:103]: Starting SystemEventListener...
+2026-10-16 18:16:19,728 [INFO] [MainThread] [root/watcher.py:65]: Watching directory: c:\users\saura\projectsiztli\iztlidots
+2026-10-16 18:16:19,728 [INFO] [MainThread] [root/watcher.py:104]: Created file watcher
+2026-10-16 18:17:37,190 [INFO] [MainThread] [root/log.py:103]: YASB v2.0.7
+2026-10-16 18:17:37,190 [INFO] [CLIPipeServer] [cli_server/cli_server.py:216]: CLI server started v1.1.7
+2026-10-16 18:17:37,191 [INFO] [MainThread] [cli_server/cli_server.py:106]: Log pipe server started
+2026-10-16 18:17:37,191 [ERROR] [MainThread] [root/main.py:46]: Another instance of the YASB is already running.
+2026-10-16 18:17:42,165 [INFO] [MainThread] [root/log.py:103]: YASB v2.0.7
+2026-10-16 18:17:42,165 [INFO] [CLIPipeServer] [cli_server/cli_server.py:216]: CLI server started v1.1.7
+2026-10-16 18:17:42,166 [INFO] [MainThread] [cli_server/cli_server.py:106]: Log pipe server started
+2026-10-16 18:17:42,166 [ERROR] [MainThread] [root/main.py:46]: Another instance of the YASB is already running.
+2026-10-16 18:17:57,054 [INFO] [MainThread] [root/controller.py:21]: Reloading Application from tray...
+2026-10-16 18:17:57,159 [INFO] [MainThread] [cli_server/cli_server.py:114]: Log pipe server stopped
+2026-10-16 18:17:57,183 [INFO] [MainThread] [root/bar_manager.py:119]: Stopping SystemEventListener...
+2026-10-16 18:17:57,189 [INFO] [MainThread] [windows_desktop_service/notification.py:171]: Unregistered virtual desktop notifications (cookie=11)
+2026-10-16 18:17:57,596 [INFO] [MainThread] [root/log.py:103]: YASB v2.0.7
+2026-10-16 18:17:57,596 [INFO] [CLIPipeServer] [cli_server/cli_server.py:216]: CLI server started v1.1.7
+2026-10-16 18:17:57,596 [INFO] [MainThread] [cli_server/cli_server.py:106]: Log pipe server started
+2026-10-16 18:17:57,663 [INFO] [MainThread] [windows_desktop_service/com.py:130]: Virtual desktop COM ready (tier 26100, build 26300)
+2026-10-16 18:17:57,666 [INFO] [MainThread] [windows_desktop_service/notification.py:163]: Registered for virtual desktop notifications (cookie=12)
+2026-10-16 18:17:57,815 [INFO] [MainThread] [root/service.py:52]: AudioOutputService starting...
+2026-10-16 18:17:58,051 [INFO] [MainThread] [root/bar_manager.py:103]: Starting SystemEventListener...
+2026-10-16 18:17:58,052 [INFO] [MainThread] [root/watcher.py:65]: Watching directory: c:\users\saura\projectsiztli\iztlidots
+2026-10-16 18:17:58,052 [INFO] [MainThread] [root/watcher.py:104]: Created file watcher
+2026-10-16 18:18:02,992 [INFO] [MainThread] [root/controller.py:43]: Exiting Application from tray...
+2026-10-16 18:18:03,107 [INFO] [MainThread] [cli_server/cli_server.py:114]: Log pipe server stopped
+2026-10-16 18:18:03,123 [INFO] [MainThread] [root/bar_manager.py:119]: Stopping SystemEventListener...
+2026-10-16 18:18:03,129 [INFO] [MainThread] [windows_desktop_service/notification.py:171]: Unregistered virtual desktop notifications (cookie=12)
+2026-10-16 18:18:16,255 [INFO] [MainThread] [root/log.py:103]: YASB v2.0.7
+2026-10-16 18:18:16,255 [INFO] [CLIPipeServer] [cli_server/cli_server.py:216]: CLI server started v1.1.7
+2026-10-16 18:18:16,255 [INFO] [MainThread] [cli_server/cli_server.py:106]: Log pipe server started
+2026-10-16 18:18:16,322 [INFO] [MainThread] [windows_desktop_service/com.py:130]: Virtual desktop COM ready (tier 26100, build 26300)
+2026-10-16 18:18:16,326 [INFO] [MainThread] [windows_desktop_service/notification.py:163]: Registered for virtual desktop notifications (cookie=13)
+2026-10-16 18:18:16,474 [INFO] [MainThread] [root/service.py:52]: AudioOutputService starting...
+2026-10-16 18:18:16,727 [INFO] [MainThread] [root/bar_manager.py:103]: Starting SystemEventListener...
+2026-10-16 18:18:16,728 [INFO] [MainThread] [root/watcher.py:65]: Watching directory: c:\users\saura\projectsiztli\iztlidots
+2026-10-16 18:18:16,728 [INFO] [MainThread] [root/watcher.py:104]: Created file watcher
+2026-10-16 18:18:23,519 [INFO] [CLIPipeServer] [cli_server/cli_server.py:257]: CLI server received command: stop
+2026-10-16 18:18:23,519 [INFO] [CLIPipeServer] [root/controller.py:43]: Exiting Application from CLI...
+2026-10-16 18:18:23,626 [INFO] [CLIPipeServer] [cli_server/cli_server.py:114]: Log pipe server stopped
+2026-10-16 18:18:23,638 [INFO] [MainThread] [root/bar_manager.py:119]: Stopping SystemEventListener...
+2026-10-16 18:18:23,644 [INFO] [MainThread] [windows_desktop_service/notification.py:171]: Unregistered virtual desktop notifications (cookie=13)
+2026-10-16 18:18:41,140 [INFO] [MainThread] [root/log.py:103]: YASB v2.0.7
+2026-10-16 18:18:41,141 [INFO] [CLIPipeServer] [cli_server/cli_server.py:216]: CLI server started v1.1.7
+2026-10-16 18:18:41,141 [INFO] [MainThread] [cli_server/cli_server.py:106]: Log pipe server started
+2026-10-16 18:18:41,383 [INFO] [MainThread] [root/service.py:52]: AudioOutputService starting...
+2026-10-16 18:18:41,688 [INFO] [MainThread] [root/bar_manager.py:103]: Starting WindowsNotificationEventListener...
+2026-10-16 18:18:41,690 [INFO] [MainThread] [root/watcher.py:65]: Watching directory: c:\users\saura\projectsiztli\iztlidots
+2026-10-16 18:18:41,690 [INFO] [MainThread] [root/watcher.py:104]: Created file watcher
+2026-10-16 18:18:41,727 [INFO] [MainThread] [root/update_service.py:434]: Background update checker started
+2026-10-16 18:18:41,738 [INFO] [Dummy-6] [root/windows_notification.py:161]: Notification service started (WNF_SHEL_NOTIFICATION_TOTAL)
+2026-10-16 21:05:55,161 [INFO] [MainThread] [root/controller.py:21]: Reloading Application because of config change.
+2026-10-16 21:05:55,271 [INFO] [MainThread] [cli_server/cli_server.py:114]: Log pipe server stopped
+2026-10-16 21:05:55,278 [INFO] [MainThread] [root/bar_manager.py:93]: Successfully loaded updated config and re-initialised all bars.
+2026-10-16 21:05:55,534 [INFO] [MainThread] [root/bar_manager.py:119]: Stopping WindowsNotificationEventListener...
+2026-10-16 21:05:55,534 [INFO] [Dummy-6] [root/windows_notification.py:97]: Notification service stopped
+2026-10-16 21:05:55,766 [INFO] [MainThread] [root/log.py:103]: YASB v2.0.7
+2026-10-16 21:05:55,766 [INFO] [CLIPipeServer] [cli_server/cli_server.py:216]: CLI server started v1.1.7
+2026-10-16 21:05:55,766 [INFO] [MainThread] [cli_server/cli_server.py:106]: Log pipe server started
+2026-10-16 21:05:57,097 [INFO] [yasb-audio-visualizer] [root/loopback.py:728]: Audio visualizer: loopback capture open (48000 Hz, 2 ch, 32-bit float)
+2026-10-16 21:05:57,201 [INFO] [MainThread] [root/service.py:52]: AudioOutputService starting...
+2026-10-16 21:05:57,474 [INFO] [MainThread] [root/service.py:225]: BrightnessService started with 2 monitors
+2026-10-16 21:05:57,484 [INFO] [MainThread] [root/service.py:41]: AudioInputService starting...
+2026-10-16 21:05:57,824 [INFO] [MainThread] [root/bar_manager.py:242]: Starting HotkeyListener...
+2026-10-16 21:05:57,824 [INFO] [MainThread] [root/bar_manager.py:103]: Starting KomorebiEventListener...
+2026-10-16 21:05:57,824 [INFO] [MainThread] [root/bar_manager.py:103]: Starting WindowsNotificationEventListener...
+2026-10-16 21:05:57,824 [INFO] [MainThread] [root/bar_manager.py:103]: Starting SystemEventListener...
+2026-10-16 21:05:57,825 [INFO] [MainThread] [root/watcher.py:65]: Watching directory: c:\users\saura\projectsiztli\iztlidots
+2026-10-16 21:05:57,825 [INFO] [MainThread] [root/watcher.py:104]: Created file watcher
+2026-10-16 21:05:57,830 [INFO] [Dummy-11] [root/event_listener.py:54]: Created named pipe yasb-acba671c-c9d7-11f1-98d6-74563c2d4a08
+2026-10-16 21:05:57,833 [INFO] [MainThread] [system_colors/system_colors.py:59]: System Colors Service started.
+2026-10-16 21:05:57,864 [INFO] [Dummy-12] [root/windows_notification.py:161]: Notification service started (WNF_SHEL_NOTIFICATION_TOTAL)
+2026-10-16 21:05:57,866 [INFO] [MainThread] [root/update_service.py:434]: Background update checker started
+2026-10-16 21:05:57,898 [WARNING] [Dummy-11] [root/event_listener.py:136]: Komorebi failed to subscribe named pipe. "komorebic.exe" no se reconoce como un comando interno o externo, programa o archivo por lotes ejecutable.
+2026-10-16 23:33:23,318 [INFO] [MainThread] [root/controller.py:21]: Reloading Application because of config change.
+2026-10-16 23:33:23,422 [INFO] [MainThread] [cli_server/cli_server.py:114]: Log pipe server stopped
+2026-10-16 23:33:23,427 [INFO] [MainThread] [root/bar_manager.py:93]: Successfully loaded updated config and re-initialised all bars.
+2026-10-16 23:33:23,696 [INFO] [MainThread] [root/bar_manager.py:111]: Stopping HotkeyListener...
+2026-10-16 23:33:23,697 [INFO] [MainThread] [root/bar_manager.py:119]: Stopping KomorebiEventListener...
+2026-10-16 23:33:23,698 [INFO] [MainThread] [root/bar_manager.py:119]: Stopping WindowsNotificationEventListener...
+2026-10-16 23:33:23,698 [INFO] [Dummy-12] [root/windows_notification.py:97]: Notification service stopped
+2026-10-16 23:33:23,698 [INFO] [MainThread] [root/bar_manager.py:119]: Stopping SystemEventListener...
+2026-10-16 23:33:23,703 [INFO] [MainThread] [system_colors/system_colors.py:69]: System Colors Service stopped.
+2026-10-16 23:33:23,875 [INFO] [MainThread] [root/log.py:103]: YASB v2.0.7
+2026-10-16 23:33:23,875 [INFO] [CLIPipeServer] [cli_server/cli_server.py:216]: CLI server started v1.1.7
+2026-10-16 23:33:23,876 [INFO] [MainThread] [cli_server/cli_server.py:106]: Log pipe server started
+2026-10-16 23:33:23,936 [ERROR] [MainThread] [root/config.py:158]: User stylesheet could not be loaded. Exiting Application.
+2026-10-16 23:33:47,743 [INFO] [MainThread] [root/log.py:103]: YASB v2.0.7
+2026-10-16 23:33:47,744 [INFO] [CLIPipeServer] [cli_server/cli_server.py:216]: CLI server started v1.1.7
+2026-10-16 23:33:47,744 [INFO] [MainThread] [cli_server/cli_server.py:106]: Log pipe server started
+2026-10-16 23:33:47,786 [ERROR] [MainThread] [root/config.py:158]: User stylesheet could not be loaded. Exiting Application.
+2026-10-16 23:34:15,843 [INFO] [MainThread] [root/log.py:103]: YASB v2.0.7
+2026-10-16 23:34:15,843 [INFO] [CLIPipeServer] [cli_server/cli_server.py:216]: CLI server started v1.1.7
+2026-10-16 23:34:15,843 [INFO] [MainThread] [cli_server/cli_server.py:106]: Log pipe server started
+2026-10-16 23:34:15,887 [ERROR] [MainThread] [root/config.py:158]: User stylesheet could not be loaded. Exiting Application.
+2026-10-16 23:35:51,204 [INFO] [MainThread] [root/log.py:103]: YASB v2.0.7
+2026-10-16 23:35:51,205 [INFO] [CLIPipeServer] [cli_server/cli_server.py:216]: CLI server started v1.1.7
+2026-10-16 23:35:51,205 [INFO] [MainThread] [cli_server/cli_server.py:106]: Log pipe server started
+2026-10-16 23:35:51,226 [ERROR] [MainThread] [root/config.py:158]: User stylesheet could not be loaded. Exiting Application.
+2026-10-16 23:36:23,962 [INFO] [MainThread] [root/log.py:103]: YASB v2.0.7
+2026-10-16 23:36:23,963 [INFO] [CLIPipeServer] [cli_server/cli_server.py:216]: CLI server started v1.1.7
+2026-10-16 23:36:23,963 [INFO] [MainThread] [cli_server/cli_server.py:106]: Log pipe server started
+2026-10-16 23:36:24,440 [INFO] [MainThread] [root/watcher.py:65]: Watching directory: c:\users\saura\projectsiztli\iztlidots
+2026-10-16 23:36:24,440 [INFO] [MainThread] [root/watcher.py:104]: Created file watcher
+2026-10-16 23:36:24,454 [INFO] [MainThread] [system_colors/system_colors.py:59]: System Colors Service started.
+2026-10-16 23:36:24,480 [INFO] [MainThread] [root/update_service.py:434]: Background update checker started
+2026-10-16 23:37:22,049 [INFO] [MainThread] [root/controller.py:43]: Exiting Application from tray...
+2026-10-16 23:37:22,151 [INFO] [MainThread] [cli_server/cli_server.py:114]: Log pipe server stopped
+2026-10-16 23:37:22,204 [INFO] [MainThread] [system_colors/system_colors.py:69]: System Colors Service stopped.
+2026-10-16 23:37:49,903 [INFO] [MainThread] [root/log.py:103]: YASB v2.0.7
+2026-10-16 23:37:49,904 [INFO] [CLIPipeServer] [cli_server/cli_server.py:216]: CLI server started v1.1.7
+2026-10-16 23:37:49,904 [INFO] [MainThread] [cli_server/cli_server.py:106]: Log pipe server started
+2026-10-16 23:37:49,926 [ERROR] [MainThread] [root/css_processor.py:47]: CSSProcessor Error 'C:\Users\saura\ProjectsIztli\IztliDots\yasb\yasb_colors.css': [Errno 2] No such file or directory: 'C:\\Users\\saura\\ProjectsIztli\\IztliDots\\yasb\\yasb_colors.css'
+2026-10-16 23:37:50,371 [ERROR] [MainThread] [root/css_processor.py:47]: CSSProcessor Error 'c:\users\saura\projectsiztli\iztlidots\yasb\yasb_colors.css': [Errno 2] No such file or directory: 'c:\\users\\saura\\projectsiztli\\iztlidots\\yasb\\yasb_colors.css'
+2026-10-16 23:37:50,372 [INFO] [MainThread] [root/watcher.py:65]: Watching directory: c:\users\saura\projectsiztli\iztlidots\yasb
+2026-10-16 23:37:50,372 [INFO] [MainThread] [root/watcher.py:104]: Created file watcher
+2026-10-16 23:37:50,384 [INFO] [MainThread] [system_colors/system_colors.py:59]: System Colors Service started.
+2026-10-16 23:37:50,415 [INFO] [MainThread] [root/update_service.py:434]: Background update checker started
+2026-10-16 23:41:47,641 [INFO] [MainThread] [root/controller.py:21]: Reloading Application because of config change.
+2026-10-16 23:41:47,755 [INFO] [MainThread] [cli_server/cli_server.py:114]: Log pipe server stopped
+2026-10-16 23:41:47,760 [INFO] [MainThread] [root/bar_manager.py:93]: Successfully loaded updated config and re-initialised all bars.
+2026-10-16 23:41:48,018 [INFO] [MainThread] [system_colors/system_colors.py:69]: System Colors Service stopped.
+2026-10-16 23:41:48,183 [INFO] [MainThread] [root/log.py:103]: YASB v2.0.7
+2026-10-16 23:41:48,183 [INFO] [CLIPipeServer] [cli_server/cli_server.py:216]: CLI server started v1.1.7
+2026-10-16 23:41:48,183 [INFO] [MainThread] [cli_server/cli_server.py:106]: Log pipe server started
+2026-10-16 23:41:48,524 [INFO] [MainThread] [root/watcher.py:65]: Watching directory: c:\users\saura\projectsiztli\iztlidots\yasb
+2026-10-16 23:41:48,525 [INFO] [MainThread] [root/watcher.py:104]: Created file watcher
+2026-10-16 23:41:48,546 [INFO] [MainThread] [system_colors/system_colors.py:59]: System Colors Service started.
+2026-10-16 23:41:48,586 [INFO] [MainThread] [root/update_service.py:434]: Background update checker started
+2026-10-16 23:41:57,262 [INFO] [MainThread] [root/controller.py:21]: Reloading Application because of config change.
+2026-10-16 23:41:57,367 [INFO] [MainThread] [cli_server/cli_server.py:114]: Log pipe server stopped
+2026-10-16 23:41:57,372 [INFO] [MainThread] [root/bar_manager.py:93]: Successfully loaded updated config and re-initialised all bars.
+2026-10-16 23:41:57,613 [INFO] [MainThread] [system_colors/system_colors.py:69]: System Colors Service stopped.
+2026-10-16 23:41:57,803 [INFO] [MainThread] [root/log.py:103]: YASB v2.0.7
+2026-10-16 23:41:57,804 [INFO] [CLIPipeServer] [cli_server/cli_server.py:216]: CLI server started v1.1.7
+2026-10-16 23:41:57,804 [INFO] [MainThread] [cli_server/cli_server.py:106]: Log pipe server started
+2026-10-16 23:41:58,036 [WARNING] [MainThread] [root/widget_builder.py:36]: Ignoring construction of invalid widget 'home'
+2026-10-16 23:41:58,077 [ERROR] [MainThread] [root/widget_builder.py:114]: Failed to validate widget(s) due to invalid options  - home
+      system_menu:
+      - Input should be a valid boolean, unable to interpret input
+      
+2026-10-16 23:41:58,097 [INFO] [MainThread] [root/watcher.py:65]: Watching directory: c:\users\saura\projectsiztli\iztlidots\yasb
+2026-10-16 23:41:58,097 [INFO] [MainThread] [root/watcher.py:104]: Created file watcher
+2026-10-16 23:41:58,103 [INFO] [MainThread] [system_colors/system_colors.py:59]: System Colors Service started.
+2026-10-16 23:41:58,140 [INFO] [MainThread] [root/update_service.py:434]: Background update checker started
+2026-10-16 23:42:02,888 [INFO] [MainThread] [root/controller.py:21]: Reloading Application because of config change.
+2026-10-16 23:42:02,992 [INFO] [MainThread] [cli_server/cli_server.py:114]: Log pipe server stopped
+2026-10-16 23:42:02,997 [INFO] [MainThread] [root/bar_manager.py:93]: Successfully loaded updated config and re-initialised all bars.
+2026-10-16 23:42:03,265 [INFO] [MainThread] [system_colors/system_colors.py:69]: System Colors Service stopped.
+2026-10-16 23:42:03,442 [INFO] [MainThread] [root/log.py:103]: YASB v2.0.7
+2026-10-16 23:42:03,443 [INFO] [CLIPipeServer] [cli_server/cli_server.py:216]: CLI server started v1.1.7
+2026-10-16 23:42:03,443 [INFO] [MainThread] [cli_server/cli_server.py:106]: Log pipe server started
+2026-10-16 23:42:03,740 [INFO] [MainThread] [root/watcher.py:65]: Watching directory: c:\users\saura\projectsiztli\iztlidots\yasb
+2026-10-16 23:42:03,740 [INFO] [MainThread] [root/watcher.py:104]: Created file watcher
+2026-10-16 23:42:03,748 [INFO] [MainThread] [system_colors/system_colors.py:59]: System Colors Service started.
+2026-10-16 23:42:03,785 [INFO] [MainThread] [root/update_service.py:434]: Background update checker started
+2026-10-16 23:42:31,551 [INFO] [MainThread] [root/controller.py:21]: Reloading Application because of config change.
+2026-10-16 23:42:31,657 [INFO] [MainThread] [cli_server/cli_server.py:114]: Log pipe server stopped
+2026-10-16 23:42:31,662 [INFO] [MainThread] [root/bar_manager.py:93]: Successfully loaded updated config and re-initialised all bars.
+2026-10-16 23:42:31,935 [INFO] [MainThread] [system_colors/system_colors.py:69]: System Colors Service stopped.
+2026-10-16 23:42:32,145 [INFO] [MainThread] [root/log.py:103]: YASB v2.0.7
+2026-10-16 23:42:32,145 [INFO] [CLIPipeServer] [cli_server/cli_server.py:216]: CLI server started v1.1.7
+2026-10-16 23:42:32,146 [INFO] [MainThread] [cli_server/cli_server.py:106]: Log pipe server started
+2026-10-16 23:42:32,445 [INFO] [MainThread] [root/watcher.py:65]: Watching directory: c:\users\saura\projectsiztli\iztlidots\yasb
+2026-10-16 23:42:32,445 [INFO] [MainThread] [root/watcher.py:104]: Created file watcher
+2026-10-16 23:42:32,452 [INFO] [MainThread] [system_colors/system_colors.py:59]: System Colors Service started.
+2026-10-16 23:42:32,495 [INFO] [MainThread] [root/update_service.py:434]: Background update checker started
+2026-10-17 00:11:00,963 [INFO] [MainThread] [root/controller.py:21]: Reloading Application because of config change.
+2026-10-17 00:11:01,078 [INFO] [MainThread] [cli_server/cli_server.py:114]: Log pipe server stopped
+2026-10-17 00:11:01,083 [INFO] [MainThread] [root/bar_manager.py:93]: Successfully loaded updated config and re-initialised all bars.
+2026-10-17 00:11:01,338 [INFO] [MainThread] [system_colors/system_colors.py:69]: System Colors Service stopped.
+2026-10-17 00:11:01,521 [INFO] [MainThread] [root/log.py:103]: YASB v2.0.7
+2026-10-17 00:11:01,522 [INFO] [CLIPipeServer] [cli_server/cli_server.py:216]: CLI server started v1.1.7
+2026-10-17 00:11:01,522 [INFO] [MainThread] [cli_server/cli_server.py:106]: Log pipe server started
+2026-10-17 00:11:01,834 [WARNING] [MainThread] [root/widget_builder.py:36]: Ignoring construction of invalid widget 'audio_visualizer'
+2026-10-17 00:11:01,855 [ERROR] [MainThread] [root/widget_builder.py:114]: Failed to validate widget(s) due to invalid options  - audio_visualizer
+      source:
+      - Extra inputs are not permitted
+      
+2026-10-17 00:11:01,870 [INFO] [MainThread] [root/watcher.py:65]: Watching directory: c:\users\saura\projectsiztli\iztlidots\yasb
+2026-10-17 00:11:01,870 [INFO] [MainThread] [root/watcher.py:104]: Created file watcher
+2026-10-17 00:11:01,879 [INFO] [MainThread] [system_colors/system_colors.py:59]: System Colors Service started.
+2026-10-17 00:11:01,893 [INFO] [MainThread] [root/update_service.py:434]: Background update checker started
+2026-10-17 00:11:15,683 [INFO] [MainThread] [root/controller.py:21]: Reloading Application because of config change.
+2026-10-17 00:11:15,793 [INFO] [MainThread] [cli_server/cli_server.py:114]: Log pipe server stopped
+2026-10-17 00:11:15,799 [INFO] [MainThread] [root/bar_manager.py:93]: Successfully loaded updated config and re-initialised all bars.
+2026-10-17 00:11:16,036 [INFO] [MainThread] [system_colors/system_colors.py:69]: System Colors Service stopped.
+2026-10-17 00:11:16,238 [INFO] [MainThread] [root/log.py:103]: YASB v2.0.7
+2026-10-17 00:11:16,238 [INFO] [CLIPipeServer] [cli_server/cli_server.py:216]: CLI server started v1.1.7
+2026-10-17 00:11:16,238 [INFO] [MainThread] [cli_server/cli_server.py:106]: Log pipe server started
+2026-10-17 00:11:16,345 [INFO] [yasb-audio-visualizer] [root/loopback.py:728]: Audio visualizer: loopback capture open (48000 Hz, 2 ch, 32-bit float)
+2026-10-17 00:11:16,588 [INFO] [MainThread] [root/watcher.py:65]: Watching directory: c:\users\saura\projectsiztli\iztlidots\yasb
+2026-10-17 00:11:16,588 [INFO] [MainThread] [root/watcher.py:104]: Created file watcher
+2026-10-17 00:11:16,595 [INFO] [MainThread] [system_colors/system_colors.py:59]: System Colors Service started.
+2026-10-17 00:11:16,623 [INFO] [MainThread] [root/update_service.py:434]: Background update checker started
+2026-10-17 00:13:21,252 [WARNING] [MainThread] [deprecation/deprecation.py:161]: [DEPRECATED] BarAlignment: 'center' - Use 'align' instead.
+2026-10-17 00:13:21,253 [ERROR] [MainThread] [root/config.py:99]: The config file 'C:\Users\saura\ProjectsIztli\IztliDots\yasb\config.yaml' contains validation errors. Please fix:
+bars:
+  main-bar:
+    height:
+    - Extra inputs are not permitted
+
+2026-10-17 00:13:46,464 [WARNING] [MainThread] [deprecation/deprecation.py:161]: [DEPRECATED] BarAlignment: 'center' - Use 'align' instead.
+2026-10-17 00:13:46,465 [ERROR] [MainThread] [root/config.py:99]: The config file 'C:\Users\saura\ProjectsIztli\IztliDots\yasb\config.yaml' contains validation errors. Please fix:
+bars:
+  primay-bar:
+    height:
+    - Extra inputs are not permitted
+
+2026-10-17 00:14:09,720 [WARNING] [MainThread] [deprecation/deprecation.py:161]: [DEPRECATED] BarAlignment: 'center' - Use 'align' instead.
+2026-10-17 00:14:09,720 [INFO] [MainThread] [root/controller.py:21]: Reloading Application because of config change.
+2026-10-17 00:14:09,835 [INFO] [MainThread] [cli_server/cli_server.py:114]: Log pipe server stopped
+2026-10-17 00:14:09,840 [INFO] [MainThread] [root/bar_manager.py:93]: Successfully loaded updated config and re-initialised all bars.
+2026-10-17 00:14:10,098 [INFO] [MainThread] [system_colors/system_colors.py:69]: System Colors Service stopped.
+2026-10-17 00:14:10,246 [INFO] [MainThread] [root/log.py:103]: YASB v2.0.7
+2026-10-17 00:14:10,246 [INFO] [CLIPipeServer] [cli_server/cli_server.py:216]: CLI server started v1.1.7
+2026-10-17 00:14:10,246 [INFO] [MainThread] [cli_server/cli_server.py:106]: Log pipe server started
+2026-10-17 00:14:10,271 [WARNING] [MainThread] [deprecation/deprecation.py:161]: [DEPRECATED] BarAlignment: 'center' - Use 'align' instead.
+2026-10-17 00:14:10,634 [WARNING] [MainThread] [root/widget_builder.py:36]: Ignoring construction of invalid widget 'media'
+2026-10-17 00:14:10,634 [WARNING] [MainThread] [root/widget_builder.py:36]: Ignoring construction of invalid widget 'cava'
+2026-10-17 00:14:10,641 [ERROR] [MainThread] [root/widget_builder.py:114]: Failed to validate widget(s) due to invalid options  - media
+      icons:
+        prev:
+        - Extra inputs are not permitted
+        next:
+        - Extra inputs are not permitted
+      max_field_length:
+      - Extra inputs are not permitted
+      
+ - cava
+      bars:
+      - Extra inputs are not permitted
+      method:
+      - Extra inputs are not permitted
+      bar_characters:
+      - Extra inputs are not permitted
+      
+2026-10-17 00:14:10,653 [INFO] [MainThread] [root/watcher.py:65]: Watching directory: c:\users\saura\projectsiztli\iztlidots\yasb
+2026-10-17 00:14:10,653 [INFO] [MainThread] [root/watcher.py:104]: Created file watcher
+2026-10-17 00:14:10,664 [INFO] [MainThread] [root/update_service.py:434]: Background update checker started
+2026-10-17 00:14:21,969 [INFO] [MainThread] [root/controller.py:21]: Reloading Application because of config change.
+2026-10-17 00:14:22,077 [INFO] [MainThread] [cli_server/cli_server.py:114]: Log pipe server stopped
+2026-10-17 00:14:22,083 [INFO] [MainThread] [root/bar_manager.py:93]: Successfully loaded updated config and re-initialised all bars.
+2026-10-17 00:14:22,469 [INFO] [MainThread] [root/log.py:103]: YASB v2.0.7
+2026-10-17 00:14:22,469 [INFO] [CLIPipeServer] [cli_server/cli_server.py:216]: CLI server started v1.1.7
+2026-10-17 00:14:22,469 [INFO] [MainThread] [cli_server/cli_server.py:106]: Log pipe server started
+2026-10-17 00:14:22,575 [INFO] [yasb-audio-visualizer] [root/loopback.py:728]: Audio visualizer: loopback capture open (48000 Hz, 2 ch, 32-bit float)
+2026-10-17 00:14:22,897 [INFO] [MainThread] [root/watcher.py:65]: Watching directory: c:\users\saura\projectsiztli\iztlidots\yasb
+2026-10-17 00:14:22,897 [INFO] [MainThread] [root/watcher.py:104]: Created file watcher
+2026-10-17 00:14:22,903 [INFO] [MainThread] [system_colors/system_colors.py:59]: System Colors Service started.
+2026-10-17 00:14:22,938 [INFO] [MainThread] [root/update_service.py:434]: Background update checker started
+2026-10-17 00:15:47,143 [INFO] [MainThread] [root/controller.py:21]: Reloading Application because of config change.
+2026-10-17 00:15:47,250 [INFO] [MainThread] [cli_server/cli_server.py:114]: Log pipe server stopped
+2026-10-17 00:15:47,255 [INFO] [MainThread] [root/bar_manager.py:93]: Successfully loaded updated config and re-initialised all bars.
+2026-10-17 00:15:47,524 [INFO] [MainThread] [system_colors/system_colors.py:69]: System Colors Service stopped.
+2026-10-17 00:15:47,671 [INFO] [MainThread] [root/log.py:103]: YASB v2.0.7
+2026-10-17 00:15:47,672 [INFO] [CLIPipeServer] [cli_server/cli_server.py:216]: CLI server started v1.1.7
+2026-10-17 00:15:47,672 [INFO] [MainThread] [cli_server/cli_server.py:106]: Log pipe server started
+2026-10-17 00:15:47,753 [WARNING] [MainThread] [root/widget_builder.py:39]: No widget config could be found for widget 'cava
+2026-10-17 00:15:47,753 [WARNING] [MainThread] [root/widget_builder.py:39]: No widget config could be found for widget 'media
+2026-10-17 00:15:47,753 [WARNING] [MainThread] [root/widget_builder.py:39]: No widget config could be found for widget 'notification
+2026-10-17 00:15:47,937 [WARNING] [MainThread] [root/widget_builder.py:36]: Ignoring construction of invalid widget 'cava'
+2026-10-17 00:15:47,938 [WARNING] [MainThread] [root/widget_builder.py:36]: Ignoring construction of invalid widget 'media'
+2026-10-17 00:15:47,938 [WARNING] [MainThread] [root/widget_builder.py:36]: Ignoring construction of invalid widget 'notification'
+2026-10-17 00:15:47,953 [ERROR] [MainThread] [root/widget_builder.py:100]: Failed to add undefined widget(s)  - The widget "cava" is undefined.
+ - The widget "media" is undefined.
+ - The widget "notification" is undefined.
+2026-10-17 00:15:47,969 [INFO] [MainThread] [root/watcher.py:65]: Watching directory: c:\users\saura\projectsiztli\iztlidots\yasb
+2026-10-17 00:15:47,969 [INFO] [MainThread] [root/watcher.py:104]: Created file watcher
+2026-10-17 00:15:47,979 [INFO] [MainThread] [system_colors/system_colors.py:59]: System Colors Service started.
+2026-10-17 00:15:47,999 [INFO] [MainThread] [root/update_service.py:434]: Background update checker started
+2026-10-17 00:16:39,361 [INFO] [MainThread] [root/controller.py:21]: Reloading Application because of config change.
+2026-10-17 00:16:39,465 [INFO] [MainThread] [cli_server/cli_server.py:114]: Log pipe server stopped
+2026-10-17 00:16:39,471 [INFO] [MainThread] [root/bar_manager.py:93]: Successfully loaded updated config and re-initialised all bars.
+2026-10-17 00:16:39,729 [INFO] [MainThread] [system_colors/system_colors.py:69]: System Colors Service stopped.
+2026-10-17 00:16:39,894 [INFO] [MainThread] [root/log.py:103]: YASB v2.0.7
+2026-10-17 00:16:39,895 [INFO] [CLIPipeServer] [cli_server/cli_server.py:216]: CLI server started v1.1.7
+2026-10-17 00:16:39,895 [INFO] [MainThread] [cli_server/cli_server.py:106]: Log pipe server started
+2026-10-17 00:16:40,153 [INFO] [MainThread] [root/watcher.py:65]: Watching directory: c:\users\saura\projectsiztli\iztlidots\yasb
+2026-10-17 00:16:40,153 [INFO] [MainThread] [root/watcher.py:104]: Created file watcher
+2026-10-17 00:16:40,161 [INFO] [MainThread] [system_colors/system_colors.py:59]: System Colors Service started.
+2026-10-17 00:16:40,193 [INFO] [MainThread] [root/update_service.py:434]: Background update checker started
+2026-10-17 01:16:18,920 [INFO] [MainThread] [system_colors/system_colors.py:69]: System Colors Service stopped.
+2026-10-18 00:10:05,684 [INFO] [MainThread] [root/log.py:103]: YASB v2.0.7
+2026-10-18 00:10:05,684 [INFO] [CLIPipeServer] [cli_server/cli_server.py:216]: CLI server started v1.1.7
+2026-10-18 00:10:05,684 [INFO] [MainThread] [cli_server/cli_server.py:106]: Log pipe server started
+2026-10-18 00:10:06,016 [INFO] [MainThread] [root/watcher.py:65]: Watching directory: c:\users\saura\projectsiztli\iztlidots\yasb
+2026-10-18 00:10:06,016 [INFO] [MainThread] [root/watcher.py:104]: Created file watcher
+2026-10-18 00:10:06,029 [INFO] [MainThread] [system_colors/system_colors.py:59]: System Colors Service started.
+2026-10-18 00:10:06,059 [INFO] [MainThread] [root/update_service.py:434]: Background update checker started
+2026-10-18 00:16:07,440 [INFO] [MainThread] [root/controller.py:21]: Reloading Application because of config change.
+2026-10-18 00:16:07,552 [INFO] [MainThread] [cli_server/cli_server.py:114]: Log pipe server stopped
+2026-10-18 00:16:07,558 [INFO] [MainThread] [root/bar_manager.py:93]: Successfully loaded updated config and re-initialised all bars.
+2026-10-18 00:16:07,832 [INFO] [MainThread] [system_colors/system_colors.py:69]: System Colors Service stopped.
+2026-10-18 00:16:07,975 [INFO] [MainThread] [root/log.py:103]: YASB v2.0.7
+2026-10-18 00:16:07,975 [INFO] [CLIPipeServer] [cli_server/cli_server.py:216]: CLI server started v1.1.7
+2026-10-18 00:16:07,976 [INFO] [MainThread] [cli_server/cli_server.py:106]: Log pipe server started
+2026-10-18 00:16:08,057 [WARNING] [MainThread] [root/widget_builder.py:39]: No widget config could be found for widget 'media
+2026-10-18 00:16:08,256 [WARNING] [MainThread] [root/widget_builder.py:36]: Ignoring construction of invalid widget 'media'
+2026-10-18 00:16:08,273 [ERROR] [MainThread] [root/widget_builder.py:100]: Failed to add undefined widget(s)  - The widget "media" is undefined.
+2026-10-18 00:16:08,291 [INFO] [MainThread] [root/watcher.py:65]: Watching directory: c:\users\saura\projectsiztli\iztlidots\yasb
+2026-10-18 00:16:08,291 [INFO] [MainThread] [root/watcher.py:104]: Created file watcher
+2026-10-18 00:16:08,303 [INFO] [MainThread] [system_colors/system_colors.py:59]: System Colors Service started.
+2026-10-18 00:16:08,321 [INFO] [MainThread] [root/update_service.py:434]: Background update checker started
+2026-10-18 00:17:16,956 [INFO] [MainThread] [root/controller.py:21]: Reloading Application because of config change.
+2026-10-18 00:17:17,065 [INFO] [MainThread] [cli_server/cli_server.py:114]: Log pipe server stopped
+2026-10-18 00:17:17,070 [INFO] [MainThread] [root/bar_manager.py:93]: Successfully loaded updated config and re-initialised all bars.
+2026-10-18 00:17:17,343 [INFO] [MainThread] [system_colors/system_colors.py:69]: System Colors Service stopped.
+2026-10-18 00:17:17,504 [INFO] [MainThread] [root/log.py:103]: YASB v2.0.7
+2026-10-18 00:17:17,504 [INFO] [CLIPipeServer] [cli_server/cli_server.py:216]: CLI server started v1.1.7
+2026-10-18 00:17:17,504 [INFO] [MainThread] [cli_server/cli_server.py:106]: Log pipe server started
+2026-10-18 00:17:17,577 [WARNING] [MainThread] [root/widget_builder.py:39]: No widget config could be found for widget 'media
+2026-10-18 00:17:17,749 [WARNING] [MainThread] [root/widget_builder.py:36]: Ignoring construction of invalid widget 'media'
+2026-10-18 00:17:17,763 [ERROR] [MainThread] [root/widget_builder.py:100]: Failed to add undefined widget(s)  - The widget "media" is undefined.
+2026-10-18 00:17:17,781 [INFO] [MainThread] [root/watcher.py:65]: Watching directory: c:\users\saura\projectsiztli\iztlidots\yasb
+2026-10-18 00:17:17,781 [INFO] [MainThread] [root/watcher.py:104]: Created file watcher
+2026-10-18 00:17:17,793 [INFO] [MainThread] [system_colors/system_colors.py:59]: System Colors Service started.
+2026-10-18 00:17:17,808 [INFO] [MainThread] [root/update_service.py:434]: Background update checker started
+2026-10-18 00:17:52,456 [INFO] [MainThread] [root/controller.py:21]: Reloading Application because of config change.
+2026-10-18 00:17:52,571 [INFO] [MainThread] [cli_server/cli_server.py:114]: Log pipe server stopped
+2026-10-18 00:17:52,576 [INFO] [MainThread] [root/bar_manager.py:93]: Successfully loaded updated config and re-initialised all bars.
+2026-10-18 00:17:52,848 [INFO] [MainThread] [system_colors/system_colors.py:69]: System Colors Service stopped.
+2026-10-18 00:17:52,996 [INFO] [MainThread] [root/log.py:103]: YASB v2.0.7
+2026-10-18 00:17:52,996 [INFO] [CLIPipeServer] [cli_server/cli_server.py:216]: CLI server started v1.1.7
+2026-10-18 00:17:52,997 [INFO] [MainThread] [cli_server/cli_server.py:106]: Log pipe server started
+2026-10-18 00:17:53,066 [WARNING] [MainThread] [root/widget_builder.py:39]: No widget config could be found for widget 'media
+2026-10-18 00:17:53,231 [WARNING] [MainThread] [root/widget_builder.py:36]: Ignoring construction of invalid widget 'media'
+2026-10-18 00:17:53,246 [ERROR] [MainThread] [root/widget_builder.py:100]: Failed to add undefined widget(s)  - The widget "media" is undefined.
+2026-10-18 00:17:53,262 [INFO] [MainThread] [root/watcher.py:65]: Watching directory: c:\users\saura\projectsiztli\iztlidots\yasb
+2026-10-18 00:17:53,262 [INFO] [MainThread] [root/watcher.py:104]: Created file watcher
+2026-10-18 00:17:53,271 [INFO] [MainThread] [system_colors/system_colors.py:59]: System Colors Service started.
+2026-10-18 00:17:53,288 [INFO] [MainThread] [root/update_service.py:434]: Background update checker started
+2026-10-18 00:18:00,534 [INFO] [MainThread] [root/controller.py:21]: Reloading Application because of config change.
+2026-10-18 00:18:00,639 [INFO] [MainThread] [cli_server/cli_server.py:114]: Log pipe server stopped
+2026-10-18 00:18:00,646 [INFO] [MainThread] [root/bar_manager.py:93]: Successfully loaded updated config and re-initialised all bars.
+2026-10-18 00:18:00,918 [INFO] [MainThread] [system_colors/system_colors.py:69]: System Colors Service stopped.
+2026-10-18 00:18:01,101 [INFO] [MainThread] [root/log.py:103]: YASB v2.0.7
+2026-10-18 00:18:01,102 [INFO] [CLIPipeServer] [cli_server/cli_server.py:216]: CLI server started v1.1.7
+2026-10-18 00:18:01,102 [INFO] [MainThread] [cli_server/cli_server.py:106]: Log pipe server started
+2026-10-18 00:18:01,363 [INFO] [MainThread] [root/watcher.py:65]: Watching directory: c:\users\saura\projectsiztli\iztlidots\yasb
+2026-10-18 00:18:01,363 [INFO] [MainThread] [root/watcher.py:104]: Created file watcher
+2026-10-18 00:18:01,373 [INFO] [MainThread] [system_colors/system_colors.py:59]: System Colors Service started.
+2026-10-18 00:18:01,398 [INFO] [MainThread] [root/update_service.py:434]: Background update checker started
+2026-10-18 00:19:07,968 [INFO] [MainThread] [root/controller.py:21]: Reloading Application because of config change.
+2026-10-18 00:19:08,075 [INFO] [MainThread] [cli_server/cli_server.py:114]: Log pipe server stopped
+2026-10-18 00:19:08,081 [INFO] [MainThread] [root/bar_manager.py:93]: Successfully loaded updated config and re-initialised all bars.
+2026-10-18 00:19:08,334 [INFO] [MainThread] [system_colors/system_colors.py:69]: System Colors Service stopped.
+2026-10-18 00:19:08,559 [INFO] [MainThread] [root/log.py:103]: YASB v2.0.7
+2026-10-18 00:19:08,560 [INFO] [CLIPipeServer] [cli_server/cli_server.py:216]: CLI server started v1.1.7
+2026-10-18 00:19:08,560 [INFO] [MainThread] [cli_server/cli_server.py:106]: Log pipe server started
+2026-10-18 00:19:08,828 [INFO] [MainThread] [root/watcher.py:65]: Watching directory: c:\users\saura\projectsiztli\iztlidots\yasb
+2026-10-18 00:19:08,828 [INFO] [MainThread] [root/watcher.py:104]: Created file watcher
+2026-10-18 00:19:08,864 [INFO] [MainThread] [root/update_service.py:434]: Background update checker started
+2026-10-18 00:21:22,906 [INFO] [MainThread] [root/controller.py:21]: Reloading Application because of config change.
+2026-10-18 00:21:23,010 [INFO] [MainThread] [cli_server/cli_server.py:114]: Log pipe server stopped
+2026-10-18 00:21:23,015 [INFO] [MainThread] [root/bar_manager.py:93]: Successfully loaded updated config and re-initialised all bars.
+2026-10-18 00:21:23,459 [INFO] [MainThread] [root/log.py:103]: YASB v2.0.7
+2026-10-18 00:21:23,459 [INFO] [CLIPipeServer] [cli_server/cli_server.py:216]: CLI server started v1.1.7
+2026-10-18 00:21:23,460 [INFO] [MainThread] [cli_server/cli_server.py:106]: Log pipe server started
+2026-10-18 00:21:23,730 [INFO] [MainThread] [root/watcher.py:65]: Watching directory: c:\users\saura\projectsiztli\iztlidots\yasb
+2026-10-18 00:21:23,730 [INFO] [MainThread] [root/watcher.py:104]: Created file watcher
+2026-10-18 00:21:23,766 [INFO] [MainThread] [root/update_service.py:434]: Background update checker started
+2026-10-18 00:21:32,352 [INFO] [MainThread] [root/controller.py:21]: Reloading Application because of config change.
+2026-10-18 00:21:32,454 [INFO] [MainThread] [cli_server/cli_server.py:114]: Log pipe server stopped
+2026-10-18 00:21:32,461 [INFO] [MainThread] [root/bar_manager.py:93]: Successfully loaded updated config and re-initialised all bars.
+2026-10-18 00:21:32,917 [INFO] [MainThread] [root/log.py:103]: YASB v2.0.7
+2026-10-18 00:21:32,917 [INFO] [CLIPipeServer] [cli_server/cli_server.py:216]: CLI server started v1.1.7
+2026-10-18 00:21:32,918 [INFO] [MainThread] [cli_server/cli_server.py:106]: Log pipe server started
+2026-10-18 00:21:32,986 [WARNING] [MainThread] [root/widget_builder.py:39]: No widget config could be found for widget 'media
+2026-10-18 00:21:33,158 [WARNING] [MainThread] [root/widget_builder.py:36]: Ignoring construction of invalid widget 'media'
+2026-10-18 00:21:33,172 [ERROR] [MainThread] [root/widget_builder.py:100]: Failed to add undefined widget(s)  - The widget "media" is undefined.
+2026-10-18 00:21:33,189 [INFO] [MainThread] [root/watcher.py:65]: Watching directory: c:\users\saura\projectsiztli\iztlidots\yasb
+2026-10-18 00:21:33,189 [INFO] [MainThread] [root/watcher.py:104]: Created file watcher
+2026-10-18 00:21:33,207 [INFO] [MainThread] [root/update_service.py:434]: Background update checker started
+2026-10-18 00:23:41,428 [INFO] [MainThread] [root/controller.py:21]: Reloading Application because of config change.
+2026-10-18 00:23:41,533 [INFO] [MainThread] [cli_server/cli_server.py:114]: Log pipe server stopped
+2026-10-18 00:23:41,540 [INFO] [MainThread] [root/bar_manager.py:93]: Successfully loaded updated config and re-initialised all bars.
+2026-10-18 00:23:42,012 [INFO] [MainThread] [root/log.py:103]: YASB v2.0.7
+2026-10-18 00:23:42,013 [INFO] [CLIPipeServer] [cli_server/cli_server.py:216]: CLI server started v1.1.7
+2026-10-18 00:23:42,013 [INFO] [MainThread] [cli_server/cli_server.py:106]: Log pipe server started
+2026-10-18 00:23:42,430 [INFO] [MainThread] [root/watcher.py:65]: Watching directory: c:\users\saura\projectsiztli\iztlidots\yasb
+2026-10-18 00:23:42,430 [INFO] [MainThread] [root/watcher.py:104]: Created file watcher
+2026-10-18 00:23:42,466 [INFO] [MainThread] [root/update_service.py:434]: Background update checker started
+2026-10-18 00:26:54,576 [INFO] [MainThread] [root/controller.py:21]: Reloading Application because of config change.
+2026-10-18 00:26:54,683 [INFO] [MainThread] [cli_server/cli_server.py:114]: Log pipe server stopped
+2026-10-18 00:26:54,689 [INFO] [MainThread] [root/bar_manager.py:93]: Successfully loaded updated config and re-initialised all bars.
+2026-10-18 00:26:55,131 [INFO] [MainThread] [root/log.py:103]: YASB v2.0.7
+2026-10-18 00:26:55,132 [INFO] [CLIPipeServer] [cli_server/cli_server.py:216]: CLI server started v1.1.7
+2026-10-18 00:26:55,132 [INFO] [MainThread] [cli_server/cli_server.py:106]: Log pipe server started
+2026-10-18 00:26:55,475 [INFO] [MainThread] [root/watcher.py:65]: Watching directory: c:\users\saura\projectsiztli\iztlidots\yasb
+2026-10-18 00:26:55,475 [INFO] [MainThread] [root/watcher.py:104]: Created file watcher
+2026-10-18 00:26:55,512 [INFO] [MainThread] [root/update_service.py:434]: Background update checker started
+2026-10-18 00:28:06,497 [INFO] [MainThread] [root/controller.py:21]: Reloading Application because of config change.
+2026-10-18 00:28:06,609 [INFO] [MainThread] [cli_server/cli_server.py:114]: Log pipe server stopped
+2026-10-18 00:28:06,615 [INFO] [MainThread] [root/bar_manager.py:93]: Successfully loaded updated config and re-initialised all bars.
+2026-10-18 00:28:07,051 [INFO] [MainThread] [root/log.py:103]: YASB v2.0.7
+2026-10-18 00:28:07,052 [INFO] [CLIPipeServer] [cli_server/cli_server.py:216]: CLI server started v1.1.7
+2026-10-18 00:28:07,052 [INFO] [MainThread] [cli_server/cli_server.py:106]: Log pipe server started
+2026-10-18 00:28:07,415 [INFO] [MainThread] [root/watcher.py:65]: Watching directory: c:\users\saura\projectsiztli\iztlidots\yasb
+2026-10-18 00:28:07,415 [INFO] [MainThread] [root/watcher.py:104]: Created file watcher
+2026-10-18 00:28:07,453 [INFO] [MainThread] [root/update_service.py:434]: Background update checker started
+2026-10-18 00:28:45,631 [INFO] [MainThread] [root/controller.py:21]: Reloading Application because of config change.
+2026-10-18 00:28:45,735 [INFO] [MainThread] [cli_server/cli_server.py:114]: Log pipe server stopped
+2026-10-18 00:28:45,742 [INFO] [MainThread] [root/bar_manager.py:93]: Successfully loaded updated config and re-initialised all bars.
