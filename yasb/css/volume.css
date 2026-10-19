@@ -49,3 +49,49 @@
     margin: -4px 0;
     border-radius: 6px;
 }
+
+/* Popup styles owned by this widget. */
+.audio-menu {
+    background-color: var(--media-background);
+    color: var(--text-primary);
+    border: 1px solid var(--bar-border);
+    border-radius: 12px;
+    padding: 8px;
+    font-family: "Consolas";
+    font-size: 12px;
+}
+
+.audio-menu QLabel {
+    color: var(--text-primary);
+    background-color: transparent;
+}
+
+.audio-menu .toggle-apps:hover,
+.audio-menu .app-volume:hover {
+    background-color: var(--bar-border);
+}
+
+.audio-menu .toggle-apps {
+    color: var(--accent);
+    background-color: transparent;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.audio-menu QSlider::groove:horizontal {
+    background-color: var(--bar-border);
+    height: 4px;
+    border-radius: 2px;
+}
+
+.audio-menu QSlider::sub-page:horizontal {
+    background-color: var(--accent);
+    border-radius: 2px;
+}
+
+.audio-menu QSlider::handle:horizontal {
+    background-color: var(--accent);
+    width: 12px;
+    margin: -4px 0;
+    border-radius: 6px;
+}

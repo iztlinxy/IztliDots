@@ -30,3 +30,14 @@
 .systray-popup .button:hover {
     background-color: var(--bar-border);
 }
+
+/* Popup styles owned by this widget. */
+.systray-popup {
+    background-color: var(--media-background);
+    color: var(--text-primary);
+    border: 1px solid var(--bar-border);
+    border-radius: 12px;
+    padding: 8px;
+    font-family: "Consolas";
+    font-size: 12px;
+}

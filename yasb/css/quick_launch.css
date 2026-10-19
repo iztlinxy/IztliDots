@@ -12,3 +12,118 @@
 .quick-launch-widget:hover {
     background-color: var(--bar-border);
 }
+/* Minimal launcher: one surface, quiet dividers, accent on selection. */
+.quick-launch-popup {
+    background-color: var(--media-background);
+    color: var(--text-primary);
+    border: 1px solid var(--bar-border);
+    border-radius: 12px;
+    padding: 12px;
+    font-family: "Segoe UI";
+    font-size: 13px;
+}
+.quick-launch-popup QLabel {
+    color: var(--text-primary);
+    background-color: transparent;
+}
+.quick-launch-popup .search {
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--bar-border);
+    border-radius: 0;
+    padding: 8px 4px 12px 4px;
+}
+.quick-launch-popup .search .search-icon {
+    color: var(--text-secondary);
+    font-size: 16px;
+}
+.quick-launch-popup .search .search-input {
+    background-color: transparent;
+    color: var(--text-primary);
+    border: none;
+    font-family: "Segoe UI";
+    font-size: 16px;
+    padding: 4px;
+    selection-background-color: var(--accent);
+    selection-color: var(--on-accent);
+}
+.quick-launch-popup .results {
+    background-color: transparent;
+    padding: 6px 0;
+}
+.quick-launch-popup .results-list-view {
+    background-color: transparent;
+    color: var(--text-primary);
+    border: none;
+    outline: none;
+    font-family: "Segoe UI";
+    font-size: 13px;
+    font-weight: 400;
+}
+.quick-launch-popup .results-list-view::item {
+    padding: 8px 10px;
+    border: none;
+    border-radius: 6px;
+}
+.quick-launch-popup .results-list-view::item:hover {
+    background-color: var(--bar-background);
+}
+.quick-launch-popup .results-list-view::item:selected {
+    background-color: var(--bar-background);
+    color: var(--accent);
+}
+.quick-launch-popup .results-list-view .description,
+.quick-launch-popup .results-list-view .separator,
+.quick-launch-popup .preview-subtitle {
+    color: var(--text-secondary);
+    font-family: "Segoe UI";
+    font-size: 11px;
+    font-weight: 400;
+}
+.quick-launch-popup .prefix {
+    background-color: transparent;
+    color: var(--accent);
+    border: none;
+    padding: 2px 6px;
+}
+.quick-launch-popup .preview {
+    background-color: transparent;
+    border-left: 1px solid var(--bar-border);
+}
+.quick-launch-popup .preview-text {
+    background-color: transparent;
+    color: var(--text-primary);
+    border: none;
+    padding: 8px 12px;
+    font-family: "Segoe UI";
+    font-size: 12px;
+}
+.quick-launch-popup .results-empty-text {
+    color: var(--text-secondary);
+    font-family: "Segoe UI";
+    font-size: 14px;
+    padding: 16px;
+}
+.quick-launch-popup .preview.edit .preview-line-edit,
+.quick-launch-popup .preview.edit .preview-text-edit {
+    background-color: var(--bar-background);
+    color: var(--text-primary);
+    border: 1px solid var(--bar-border);
+    border-radius: 6px;
+    padding: 6px;
+    selection-background-color: var(--accent);
+    selection-color: var(--on-accent);
+}
+.quick-launch-popup .preview.edit .preview-btn {
+    background-color: var(--bar-background);
+    color: var(--text-primary);
+    border: none;
+    border-radius: 6px;
+    padding: 6px 12px;
+}
+.quick-launch-popup .preview.edit .preview-btn:hover {
+    background-color: var(--bar-border);
+}
+.quick-launch-popup .preview.edit .preview-btn.save {
+    color: var(--accent);
+}

@@ -1,3 +1,37 @@
+/* Popup styles owned by this widget. */
+.control-center-menu {
+    background-color: var(--media-background);
+    color: var(--text-primary);
+    border: 1px solid var(--bar-border);
+    border-radius: 12px;
+    padding: 8px;
+    font-family: "Consolas";
+    font-size: 12px;
+}
+
+.control-center-menu QLabel {
+    color: var(--text-primary);
+    background-color: transparent;
+}
+
+.control-center-menu QSlider::groove:horizontal {
+    background-color: var(--bar-border);
+    height: 4px;
+    border-radius: 2px;
+}
+
+.control-center-menu QSlider::sub-page:horizontal {
+    background-color: var(--accent);
+    border-radius: 2px;
+}
+
+.control-center-menu QSlider::handle:horizontal {
+    background-color: var(--accent);
+    width: 12px;
+    margin: -4px 0;
+    border-radius: 6px;
+}
+
 /* Bar launcher. */
 .control-center-widget {
     background-color: var(--media-background);

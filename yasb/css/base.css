@@ -4,3 +4,35 @@
     font-size: 12px;
     color: var(--text-primary);
 }
+
+/* Popup styles owned by this widget. */
+QMenu {
+    background-color: var(--media-background);
+    color: var(--text-primary);
+    border: 1px solid var(--bar-border);
+    border-radius: 12px;
+    padding: 8px;
+    font-family: "Consolas";
+    font-size: 12px;
+}
+
+QMenu::item {
+    color: var(--text-primary);
+    padding: 8px 24px;
+    border-radius: 8px;
+}
+
+QMenu::item:selected {
+    color: var(--accent);
+    background-color: var(--bar-border);
+}
+
+QMenu::item:disabled {
+    color: var(--text-disabled);
+}
+
+QMenu::separator {
+    background-color: var(--bar-border);
+    height: 1px;
+    margin: 4px 8px;
+}

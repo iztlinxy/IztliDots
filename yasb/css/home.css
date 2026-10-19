@@ -12,3 +12,31 @@
 .home-widget:hover {
     background-color: var(--bar-border);
 }
+
+/* Popup styles owned by this widget. */
+.home-menu {
+    background-color: var(--media-background);
+    color: var(--text-primary);
+    border: 1px solid var(--bar-border);
+    border-radius: 12px;
+    padding: 8px;
+    font-family: "Consolas";
+    font-size: 12px;
+}
+
+.home-menu .menu-item {
+    color: var(--text-primary);
+    padding: 8px 24px;
+    border-radius: 8px;
+}
+
+.home-menu .menu-item:hover {
+    color: var(--accent);
+    background-color: var(--bar-border);
+}
+
+.home-menu .separator {
+    background-color: var(--bar-border);
+    height: 1px;
+    margin: 4px 8px;
+}

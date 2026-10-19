@@ -67,3 +67,89 @@
 .media-widget.playback-controls .btn.disabled {
     color: var(--text-disabled);
 }
+
+/* Popup styles owned by this widget. */
+.media-menu {
+    background-color: var(--media-background);
+    color: var(--text-primary);
+    border: 1px solid var(--bar-border);
+    border-radius: 12px;
+    padding: 8px;
+    font-family: "Consolas";
+    font-size: 12px;
+}
+
+.media-menu QLabel {
+    color: var(--text-primary);
+    background-color: transparent;
+}
+
+.media-menu .title {
+    padding: 4px 12px 6px 12px;
+    color: var(--text-primary);
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.media-menu .artist,
+.media-menu .source {
+    padding: 2px 12px 6px 12px;
+    color: var(--text-secondary);
+}
+
+.media-menu .btn {
+    color: var(--accent);
+    background-color: var(--bar-background);
+    font-family: "Segoe Fluent Icons";
+    font-size: 11px;
+    border-radius: 12px;
+    min-width: 24px;
+    max-width: 24px;
+    min-height: 24px;
+    max-height: 24px;
+    padding: 0;
+    margin: 0 3px;
+}
+
+.media-menu .btn:hover {
+    background-color: var(--bar-border);
+}
+
+.media-menu .btn.play {
+    background-color: var(--accent);
+    color: var(--on-accent);
+}
+
+.media-menu QSlider::groove:horizontal {
+    background-color: var(--bar-border);
+    height: 4px;
+    border-radius: 2px;
+}
+
+.media-menu QSlider::sub-page:horizontal {
+    background-color: var(--accent);
+    border-radius: 2px;
+}
+
+.media-menu QSlider::handle:horizontal {
+    background-color: var(--accent);
+    width: 12px;
+    margin: -4px 0;
+    border-radius: 6px;
+}
+
+.media-menu QSlider::groove:vertical {
+    background-color: var(--bar-border);
+    width: 4px;
+}
+
+.media-menu QSlider::add-page:vertical {
+    background-color: var(--accent);
+}
+
+.media-menu QSlider::handle:vertical {
+    background-color: var(--accent);
+    height: 12px;
+    margin: 0 -4px;
+    border-radius: 6px;
+}

@@ -10,3 +10,66 @@
     font-size: 18px;
     font-weight: 700;
 }
+
+/* Popup styles owned by this widget. */
+.clock-popup {
+    background-color: var(--media-background);
+    color: var(--text-primary);
+    border: 1px solid var(--bar-border);
+    border-radius: 12px;
+    padding: 8px;
+    font-family: "Consolas";
+    font-size: 12px;
+}
+
+.clock-popup QLabel {
+    color: var(--text-primary);
+    background-color: transparent;
+}
+
+.clock-popup .calendar-table {
+    background-color: transparent;
+    color: var(--text-primary);
+    border: none;
+    selection-background-color: var(--accent);
+    selection-color: var(--on-accent);
+}
+
+.clock-popup .calendar-table::item:selected {
+    background-color: var(--accent);
+    color: var(--on-accent);
+    border-radius: 8px;
+}
+
+.clock-popup .day-label,
+.clock-popup .date-label {
+    color: var(--accent);
+    font-weight: 700;
+}
+
+.clock-popup .button,
+.clock-popup QPushButton {
+    background-color: var(--bar-background);
+    color: var(--text-primary);
+    border: none;
+    border-radius: 8px;
+    padding: 6px 10px;
+}
+
+.clock-popup .button:hover,
+.clock-popup QPushButton:hover {
+    background-color: var(--bar-border);
+    color: var(--accent);
+}
+
+.clock-popup QLineEdit,
+.clock-popup QSpinBox,
+.clock-popup QComboBox {
+    background-color: var(--bar-background);
+    color: var(--text-primary);
+    border: 1px solid var(--bar-border);
+    border-radius: 6px;
+    padding: 6px;
+    selection-background-color: var(--accent);
+    selection-color: var(--on-accent);
+}
