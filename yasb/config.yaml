@@ -68,10 +68,10 @@ widgets:
     type: yasb.wallpapers.WallpapersWidget
     options:
       label: "<span>\ue7aa</span>"
-      image_path: 'C:\Windows\Web\Wallpaper\Windows'
+      image_path: 'C:\Users\saura\Pictures\wallpapers'
       change_automatically: false
       gallery:
-        image_width: 220
+        image_width: 360
         image_corner_radius: 12
         accent_color: "#ffc04d"
       callbacks:
