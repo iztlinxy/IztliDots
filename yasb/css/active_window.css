@@ -1,7 +1,7 @@
 .active-window-widget {
     background-color: var(--media-background);
     border-radius: 20px;
-    margin: 4px 0;
+    margin: 4px 2px;
     padding: 0 12px;
 }
 .active-window-widget .label {

@@ -159,6 +159,9 @@ widgets:
       label: "<span>\ue721</span>"
       search_placeholder: "Buscar aplicaciones..."
       show_icons: true
+      keybindings:
+        - keys: "alt+space"
+          action: toggle_quick_launch
       callbacks:
         on_left: toggle_quick_launch
 
@@ -179,7 +182,7 @@ widgets:
   home:
     type: yasb.home.HomeWidget
     options:
-      label: "<span>家</span>"
+      label: "<span>仙</span>"
       system_menu: false
       power_menu: true
       blur: false
