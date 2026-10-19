@@ -12,6 +12,11 @@
     padding: 4px;
     color: var(--accent);
     font-family: "Segoe Fluent Icons";
+    min-width: 18px;
+    max-width: 18px;
+    min-height: 18px;
+    max-height: 18px;
+    margin: 0;
 }
 .systray .button:hover,
 .systray .unpinned-visibility-btn:hover {

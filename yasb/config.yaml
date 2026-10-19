@@ -63,6 +63,11 @@ widgets:
       show_in_popup: true
       icons_per_row: 4
       show_volume: false
+      popup:
+        alignment: center
+        direction: down
+        offset_top: 6
+        offset_left: 0
 
   wallpapers:
     type: yasb.wallpapers.WallpapersWidget
