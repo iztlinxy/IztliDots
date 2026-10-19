@@ -1,0 +1,64 @@
+/* Circular cover, followed by the text and playback capsule. */
+.media-widget.cover-art {
+    background-color: #292a27;
+    border-top-left-radius: 23px;
+    border-bottom-left-radius: 23px;
+    margin: 4px 0;
+    padding: 5px 8px 5px 10px;
+}
+.media-widget.cover-art .label {
+    min-width: 36px;
+    max-width: 36px;
+    min-height: 36px;
+    max-height: 36px;
+    padding: 0;
+    margin: 0;
+    color: transparent;
+}
+.media-widget.now-playing {
+    background-color: #292a27;
+    border-top-right-radius: 23px;
+    border-bottom-right-radius: 23px;
+    padding: 0 12px 0 2px;
+    margin: 4px 0;
+}
+.media-widget.now-playing .label {
+    color: #eee8dc;
+    font-family: "Consolas";
+    font-size: 12px;
+    padding: 0 10px 0 0;
+    min-width: 182px;
+}
+.media-widget.now-playing .btn {
+    color: #d5d1c5;
+    font-family: "Segoe Fluent Icons";
+    font-size: 10px;
+    background-color: transparent;
+    border: none;
+    min-width: 18px;
+    max-width: 18px;
+    padding: 0;
+    margin: 0 3px;
+}
+.media-widget.now-playing .btn:hover {
+    color: #ffc04d;
+}
+.media-widget.now-playing .btn.play {
+    color: #30281c;
+    background-color: #ffc04d;
+    font-size: 14px;
+    min-width: 32px;
+    max-width: 32px;
+    min-height: 32px;
+    max-height: 32px;
+    border-radius: 16px;
+    padding: 0;
+    margin: 0 6px;
+}
+.media-widget.now-playing .btn.play:hover {
+    background-color: #ffd27b;
+    color: #30281c;
+}
+.media-widget.now-playing .btn.disabled {
+    color: #68685f;
+}

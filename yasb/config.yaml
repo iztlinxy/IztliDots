@@ -27,7 +27,7 @@ bars:
       windows_app_bar: true
     dimensions:
       width: 100%
-      height: 35
+      height: 54
     padding:
       top: 0
       left: 0
@@ -38,7 +38,9 @@ bars:
       - home
       center:
       - clock
+      - media_art
       - media
+      - notifications
 
 widgets:
   home:
@@ -57,7 +59,7 @@ widgets:
   clock:
     type: yasb.clock.ClockWidget
     options:
-      label: '{%a, %d %b %H:%M}<span>{alarm}</span>'
+      label: '{%H:%M}'
       label_alt: '{%a, %d %b %H:%M}'
       timezones: []
       calendar:
@@ -72,11 +74,31 @@ widgets:
         show_week_numbers: true
       callbacks:
         on_left: toggle_calendar
+        on_right: toggle_label
+
+  # Separate thumbnail: MediaWidget normally overlays its artwork and text.
+  media_art:
+    type: yasb.media.MediaWidget
+    options:
+      label: " "
+      label_alt: " "
+      class_name: "cover-art"
+      hide_empty: true
+      show_thumbnail: true
+      controls_hide: true
+      thumbnail_alpha: 255
+      thumbnail_padding: 0
+      thumbnail_corner_radius: 18
+      symmetric_corner_radius: true
+      thumbnail_edge_fade: false
+      callbacks:
+        on_left: toggle_media_menu
+        on_middle: toggle_play_pause
 
   media:
     type: yasb.media.MediaWidget
     options:
-      label: "{title}"
+      label: '<table cellspacing="0" cellpadding="0"><tr><td align="left"><b>{title}</b></td><td rowspan="2" style="color:#ffc04d; padding-left:12px;">·····</td></tr><tr><td align="left"><span style="color:#99968b; font-size:10px;">{artist}</span></td></tr></table>'
       label_alt: "{artist}"
       separator: " - "
       hide_empty: true
@@ -84,8 +106,8 @@ widgets:
       max_field_size:
         label: 22
         label_alt: 28
-        truncate_whole_label: true
-      show_thumbnail: true
+        truncate_whole_label: false
+      show_thumbnail: false
       controls_only: false
       controls_left: false
       controls_hide: false
@@ -120,7 +142,7 @@ widgets:
         show_source: true
         show_volume_slider: true
       scrolling_label:
-        enabled: true
+        enabled: false
         update_interval_ms: 33
         style: left
         separator: "   •   "
@@ -128,3 +150,15 @@ widgets:
         always_scroll: false
       progress_bar:
         enabled: false
+
+  notifications:
+    type: yasb.notifications.NotificationsWidget
+    options:
+      label: "<span>{icon}</span>{count}"
+      label_alt: "<span>{icon}</span>{count}"
+      hide_empty: false
+      icons:
+        new: "\ue7f4"
+        default: "\ue7ed"
+      callbacks:
+        on_left: toggle_notification

@@ -1,0 +1,22 @@
+.notification-widget {
+    background-color: transparent;
+    padding: 0 10px 0 18px;
+}
+.notification-widget .icon {
+    font-family: "Segoe Fluent Icons";
+    font-size: 20px;
+    color: #eee8dc;
+    padding: 0 3px 0 0;
+}
+.notification-widget .label {
+    font-family: "Consolas";
+    font-size: 10px;
+    font-weight: 700;
+    color: #302923;
+    background-color: #f2c8b9;
+    border-radius: 7px;
+    min-width: 16px;
+    max-height: 14px;
+    padding: 0 3px;
+    margin: 0 0 18px 0;
+}
