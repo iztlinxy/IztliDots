@@ -2,11 +2,13 @@
 
 import argparse
 import colorsys
+from contextlib import contextmanager
 import json
 import os
 from pathlib import Path
 import re
 import tempfile
+import time
 
 
 DEFAULT_SETTINGS = Path(__file__).resolve().parents[1] / "theme" / "settings.json"
@@ -17,7 +19,8 @@ def mix(first, second, amount):
 
 
 def tone(rgb, saturation, lightness):
-    hue = colorsys.rgb_to_hls(*(value / 255 for value in rgb))[0]
+    hue, _, source_saturation = colorsys.rgb_to_hls(*(value / 255 for value in rgb))
+    saturation = min(saturation, source_saturation)
     return tuple(round(value * 255) for value in colorsys.hls_to_rgb(hue, lightness, saturation))
 
 
@@ -60,19 +63,21 @@ def extract(image_path, settings):
         quantized = sample.quantize(colors=settings["palette_size"])
         palette = quantized.getpalette()
         counts = sorted(quantized.getcolors(), reverse=True)
-        return [tuple(palette[index * 3:index * 3 + 3]) for _, index in counts]
+        return [(tuple(palette[index * 3:index * 3 + 3]), count / len(pixels))
+                for count, index in counts]
 
 
 def build_palette(colors, fixed_accent=None):
-    dominant = colors[0]
-    accent_source = max(colors, key=lambda c: colorsys.rgb_to_hls(*(v / 255 for v in c))[2])
+    dominant = colors[0][0]
+    accent_source = max(colors, key=lambda item: item[1] ** 0.5 *
+                        colorsys.rgb_to_hls(*(v / 255 for v in item[0]))[2])[0]
     background = tone(dominant, 0.12, 0.16)
     surface = tone(dominant, 0.10, 0.12)
     primary = tone(dominant, 0.12, 0.94)
     secondary = readable(tone(dominant, 0.10, 0.64), background)
     accent = tuple(bytes.fromhex(fixed_accent[1:])) if fixed_accent else tone(accent_source, 0.65, 0.68)
     accent = readable(accent, background)
-    badge = tone(colors[1] if len(colors) > 1 else dominant, 0.35, 0.78)
+    badge = tone(colors[1][0] if len(colors) > 1 else dominant, 0.35, 0.78)
     return {
         "bar-background": background,
         "bar-border": mix(background, primary, 0.16),
@@ -114,7 +119,73 @@ def publish_css(path, content):
     os.utime(path, None)
 
 
+def read_settings(path):
+    settings = json.loads(path.read_text(encoding="utf-8-sig"))
+    if not isinstance(settings, dict):
+        raise ValueError("La configuración debe ser un objeto JSON")
+    if settings.get("mode", "dark") != "dark":
+        raise ValueError("Solo se admite el modo dark")
+    for name, low, high in (("sample_size", 16, 512), ("palette_size", 2, 64)):
+        value = settings[name]
+        if type(value) is not int or not low <= value <= high:
+            raise ValueError(f"{name} debe ser un entero entre {low} y {high}")
+    fixed = settings.get("fixed_accent")
+    if fixed is not None and (not isinstance(fixed, str) or not re.fullmatch(r"#[0-9a-fA-F]{6}", fixed)):
+        raise ValueError("fixed_accent debe ser null o #RRGGBB")
+    for name in ("output_css", "backup_css"):
+        settings[name] = (path.parent / settings[name]).resolve()
+    if settings["output_css"] == settings["backup_css"]:
+        raise ValueError("La salida y su respaldo deben ser archivos distintos")
+    return settings
+
+
+@contextmanager
+def output_lock(path):
+    import msvcrt
+
+    path.parent.mkdir(parents=True, exist_ok=True)
+    with path.open("a+b") as stream:
+        if stream.tell() == 0:
+            stream.write(b"0")
+            stream.flush()
+        deadline = time.monotonic() + 30
+        while True:
+            stream.seek(0)
+            try:
+                msvcrt.locking(stream.fileno(), msvcrt.LK_NBLCK, 1)
+                break
+            except OSError:
+                if time.monotonic() >= deadline:
+                    raise TimeoutError("Otra actualización mantiene bloqueada la paleta")
+                time.sleep(0.05)
+        try:
+            yield
+        finally:
+            stream.seek(0)
+            msvcrt.locking(stream.fileno(), msvcrt.LK_UNLCK, 1)
+
+
+def apply_theme(settings, css, request, restore=False):
+    output, backup = settings["output_css"], settings["backup_css"]
+    revision = backup.with_suffix(".revision")
+    with output_lock(backup.with_suffix(".lock")):
+        if revision.exists() and request < int(revision.read_text()):
+            return "Actualización anterior descartada"
+        if restore:
+            css = backup.read_text(encoding="utf-8-sig")
+        previous = output.read_text(encoding="utf-8-sig") if output.exists() else None
+        if previous != css:
+            if previous is not None and not restore:
+                atomic_write(backup, previous)
+            publish_css(output, css)
+        else:
+            os.utime(output, None)
+        atomic_write(revision, str(request))
+    return f"Tema {'restaurado' if restore else 'actualizado'}: {output}"
+
+
 def main():
+    request = time.time_ns()
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("image", type=Path, nargs="?")
     parser.add_argument("--settings", type=Path, default=DEFAULT_SETTINGS)
@@ -123,36 +194,15 @@ def main():
     actions.add_argument("--restore", action="store_true", help="Restore the previous CSS palette")
     args = parser.parse_args()
     try:
-        settings_path = args.settings.resolve()
-        settings = json.loads(settings_path.read_text(encoding="utf-8-sig"))
-        if settings["mode"] != "dark":
-            raise ValueError("Solo se admite el modo dark")
-        if not 16 <= settings["sample_size"] <= 512 or not 2 <= settings["palette_size"] <= 64:
-            raise ValueError("sample_size debe ser 16–512 y palette_size 2–64")
-        fixed = settings.get("fixed_accent")
-        if fixed is not None and not re.fullmatch(r"#[0-9a-fA-F]{6}", fixed):
-            raise ValueError("fixed_accent debe ser null o #RRGGBB")
-        output = (settings_path.parent / settings["output_css"]).resolve()
-        backup = (settings_path.parent / settings["backup_css"]).resolve()
-        if output == backup:
-            raise ValueError("La salida y su respaldo deben ser archivos distintos")
+        settings = read_settings(args.settings.resolve())
         if args.restore:
-            publish_css(output, backup.read_text(encoding="utf-8-sig"))
-            print(f"Restaurado: {output}")
+            print(apply_theme(settings, None, request, restore=True))
             return
         if args.image is None:
             parser.error("Indica la ruta de una imagen")
-        css = render(build_palette(extract(args.image, settings), fixed))
+        css = render(build_palette(extract(args.image, settings), settings.get("fixed_accent")))
         if args.apply:
-            if output.exists():
-                previous = output.read_text(encoding="utf-8-sig")
-                if previous == css:
-                    os.utime(output, None)
-                    print("La paleta no cambió")
-                    return
-                atomic_write(backup, previous)
-            publish_css(output, css)
-            print(f"Actualizado: {output}")
+            print(apply_theme(settings, css, request))
         else:
             print(css, end="")
     except (OSError, ValueError, KeyError, TypeError, ImportError) as error:
