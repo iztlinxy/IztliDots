@@ -9,7 +9,7 @@ update_check: true
 bars:
   primary-bar:
     enabled: true
-    style: "adaptive"
+    style: "bar"
     screens:
     - '*'
     class_name: yasb-bar
@@ -27,7 +27,7 @@ bars:
       windows_app_bar: true
     dimensions:
       width: 100%
-      height: 54
+      height: 48
     padding:
       top: 0
       left: 0
