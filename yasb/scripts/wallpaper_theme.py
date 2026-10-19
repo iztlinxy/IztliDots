@@ -2,16 +2,15 @@
 
 import argparse
 import colorsys
-import json
-import msvcrt
 import os
 from pathlib import Path
-import re
 import tempfile
-import time
+
+import colorgram
+from PIL import Image
 
 
-DEFAULT_SETTINGS = Path(__file__).resolve().parents[1] / "theme" / "settings.json"
+OUTPUT = Path(__file__).resolve().parents[1] / "css" / "root.css"
 
 
 def mix(first, second, amount):
@@ -47,27 +46,7 @@ def readable(color, background):
     return (255, 255, 255)
 
 
-def extract(image_path, settings):
-    from PIL import Image, ImageOps
-
-    with Image.open(image_path) as source:
-        image = ImageOps.exif_transpose(source).convert("RGBA")
-        image.thumbnail((settings["sample_size"], settings["sample_size"]))
-        # Ignore transparent pixels instead of introducing a synthetic background.
-        data = image.get_flattened_data() if hasattr(image, "get_flattened_data") else image.getdata()
-        pixels = [pixel[:3] for pixel in data if pixel[3] >= 128]
-        if not pixels:
-            raise ValueError("La imagen no contiene píxeles visibles")
-        sample = Image.new("RGB", (len(pixels), 1))
-        sample.putdata(pixels)
-        quantized = sample.quantize(colors=settings["palette_size"])
-        palette = quantized.getpalette()
-        counts = sorted(quantized.getcolors(), reverse=True)
-        return [(tuple(palette[index * 3:index * 3 + 3]), count / len(pixels))
-                for count, index in counts]
-
-
-def build_palette(colors, fixed_accent=None):
+def build_palette(colors):
     dominant = colors[0][0]
     accent_source = max(colors, key=lambda item: item[1] ** 0.5 *
                         colorsys.rgb_to_hls(*(v / 255 for v in item[0]))[2])[0]
@@ -75,8 +54,7 @@ def build_palette(colors, fixed_accent=None):
     surface = tone(dominant, 0.10, 0.12)
     primary = tone(dominant, 0.12, 0.94)
     secondary = readable(tone(dominant, 0.10, 0.64), background)
-    accent = tuple(bytes.fromhex(fixed_accent[1:])) if fixed_accent else tone(accent_source, 0.65, 0.68)
-    accent = readable(accent, background)
+    accent = readable(tone(accent_source, 0.65, 0.68), background)
     badge = tone(colors[1][0] if len(colors) > 1 else dominant, 0.35, 0.78)
     return {
         "bar-background": background,
@@ -114,74 +92,31 @@ def atomic_write(path, content):
         Path(temporary).unlink(missing_ok=True)
 
 
-def read_settings(path):
-    settings = json.loads(path.read_text(encoding="utf-8-sig"))
-    if not isinstance(settings, dict):
-        raise ValueError("La configuración debe ser un objeto JSON")
-    for name, low, high in (("sample_size", 16, 512), ("palette_size", 2, 64)):
-        value = settings[name]
-        if type(value) is not int or not low <= value <= high:
-            raise ValueError(f"{name} debe ser un entero entre {low} y {high}")
-    fixed = settings.get("fixed_accent")
-    if fixed is not None and (not isinstance(fixed, str) or not re.fullmatch(r"#[0-9a-fA-F]{6}", fixed)):
-        raise ValueError("fixed_accent debe ser null o #RRGGBB")
-    for name in ("output_css", "backup_css"):
-        settings[name] = (path.parent / settings[name]).resolve()
-    if settings["output_css"] == settings["backup_css"]:
-        raise ValueError("La salida y su respaldo deben ser archivos distintos")
-    return settings
-
-
-def apply_theme(settings, css, request, restore=False):
-    output, backup = settings["output_css"], settings["backup_css"]
-    revision = backup.with_suffix(".revision")
-    backup.parent.mkdir(parents=True, exist_ok=True)
-    with backup.with_suffix(".lock").open("a+b") as lock:
-        if lock.tell() == 0:
-            lock.write(b"0")
-            lock.flush()
-        lock.seek(0)
-        # shortcut: Windows waits up to 10s; use a worker queue if updates exceed that.
-        msvcrt.locking(lock.fileno(), msvcrt.LK_LOCK, 1)
-        if revision.exists() and request < int(revision.read_text()):
-            return "Actualización anterior descartada"
-        if restore:
-            css = backup.read_text(encoding="utf-8-sig")
-        previous = output.read_text(encoding="utf-8-sig") if output.exists() else None
-        if previous != css:
-            if previous is not None and not restore:
-                atomic_write(backup, previous)
-            atomic_write(output, css)
-        else:
-            os.utime(output, None)
-        atomic_write(revision, str(request))
-    return f"Tema {'restaurado' if restore else 'actualizado'}: {output}"
-
-
 def main():
-    # shortcut: process start defines order; pass widget sequence IDs if click order is needed.
-    request = time.time_ns()
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("image", type=Path, nargs="?")
-    parser.add_argument("--settings", type=Path, default=DEFAULT_SETTINGS)
-    actions = parser.add_mutually_exclusive_group()
-    actions.add_argument("--apply", action="store_true", help="Write CSS and back up the previous palette")
-    actions.add_argument("--restore", action="store_true", help="Restore the previous CSS palette")
+    parser.add_argument("image", type=Path)
+    parser.add_argument("--apply", action="store_true")
     args = parser.parse_args()
     try:
-        settings = read_settings(args.settings.resolve())
-        if args.restore:
-            print(apply_theme(settings, None, request, restore=True))
-            return
-        if args.image is None:
-            parser.error("Indica la ruta de una imagen")
-        css = render(build_palette(extract(args.image, settings), settings.get("fixed_accent")))
+        with Image.open(args.image) as image:
+            image.thumbnail((160, 160))
+            colors = colorgram.extract(image, 12)
+        if not colors:
+            raise ValueError("La imagen no contiene colores visibles")
+        colors = sorted(((color.rgb, color.proportion) for color in colors),
+                        key=lambda item: item[1], reverse=True)
+        css = render(build_palette(colors))
         if args.apply:
-            print(apply_theme(settings, css, request))
+            # shortcut: overlapping runs finish in any order; add a worker queue if needed.
+            if not OUTPUT.exists() or OUTPUT.read_text(encoding="utf-8-sig") != css:
+                atomic_write(OUTPUT, css)
+            else:
+                os.utime(OUTPUT, None)
+            print(f"Actualizado: {OUTPUT}")
         else:
             print(css, end="")
-    except (OSError, ValueError, KeyError, TypeError, ImportError) as error:
-        parser.exit(1, f"No se actualizó el tema: {error}\n")
+    except (OSError, ValueError) as error:
+        parser.exit(1, f"No se pudo aplicar el tema: {error}\n")
 
 
 if __name__ == "__main__":
