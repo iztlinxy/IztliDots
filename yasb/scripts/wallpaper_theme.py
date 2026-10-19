@@ -51,7 +51,8 @@ def extract(image_path, settings):
         image = ImageOps.exif_transpose(source).convert("RGBA")
         image.thumbnail((settings["sample_size"], settings["sample_size"]))
         # Ignore transparent pixels instead of introducing a synthetic background.
-        pixels = [pixel[:3] for pixel in image.getdata() if pixel[3] >= 128]
+        data = image.get_flattened_data() if hasattr(image, "get_flattened_data") else image.getdata()
+        pixels = [pixel[:3] for pixel in data if pixel[3] >= 128]
         if not pixels:
             raise ValueError("La imagen no contiene píxeles visibles")
         sample = Image.new("RGB", (len(pixels), 1))

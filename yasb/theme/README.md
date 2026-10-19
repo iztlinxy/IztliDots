@@ -45,13 +45,16 @@ contraste. Los originales de los wallpapers nunca se modifican.
 
 - Vista previa por defecto; escritura atómica y respaldo al usar `--apply`.
 - Textos principales y acentos ajustados para contraste sobre el fondo oscuro.
-- No se ha conectado todavía al `run_after` de Wallpapers.
+- `config.yaml` conecta `run_after` de Wallpapers con el Python de `scripts/.venv`.
+  Cada cambio desde el widget pasa `{image}` al generador con `--apply`.
+  Las rutas son absolutas: actualízalas si mueves este repositorio.
+  No detecta cambios realizados desde la configuración de Windows.
 - No modifica los colores escritos directamente en `config.yaml`.
 - Ejecutar de forma secuencial: la coordinación de cambios rápidos queda pendiente.
 - YASB tiene `watch_stylesheet: true`; al aplicar se recarga la paleta CSS.
 
-Antes de conectar la ejecución automática: instalar Pillow, probar la paleta con
-distintos fondos, coordinar ejecuciones concurrentes y resolver los colores YAML.
+La automatización requiere instalar las dependencias del entorno indicado arriba.
+Los colores literales de YAML siguen siendo independientes de la paleta CSS.
 
 ## Verificación
 
