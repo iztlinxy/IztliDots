@@ -102,6 +102,41 @@ widgets:
     options:
       label: "<span>\ue713</span>"
       tooltip: true
+      sections:
+        system_controls:
+          profile_image_size: 36
+        quick_actions:
+          columns: 3
+          actions:
+            - id: toggle_dnd
+              label: "No molestar"
+              icon: "\ue708"
+            - id: toggle_theme
+              label: "Tema oscuro"
+              icon: "\ue790"
+            - id: touch_keyboard
+              label: "Teclado"
+              icon: "\ue765"
+            - id: toggle_mute
+              label: "Silenciar"
+              icon: "\ue74f"
+            - id: toggle_mic_mute
+              label: "Micrófono"
+              icon: "\ue720"
+            - id: screenshot
+              label: "Captura"
+              icon: "\ue91b"
+        power:
+          power_plan_title: "Plan de energía"
+          power_mode_title: "Modo de energía"
+        media:
+          thumbnail_size: 48
+          thumbnail_radius: 8
+          icons:
+            prev_track: "\ue892"
+            next_track: "\ue893"
+            play: "\ue768"
+            pause: "\ue769"
       popup:
         alignment: right
         direction: down

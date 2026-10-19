@@ -1,3 +1,4 @@
+/* Bar launcher. */
 .control-center-widget {
     background-color: var(--media-background);
     border-radius: 20px;
@@ -12,32 +13,175 @@
 .control-center-widget:hover {
     background-color: var(--bar-border);
 }
+/* Give the layout enough width for labels, values and playback buttons. */
+.control-center-menu {
+    min-width: 380px;
+    max-width: 380px;
+    padding: 12px;
+    border-radius: 18px;
+    font-family: "Segoe UI";
+}
 .control-center-menu .section {
     background-color: var(--bar-background);
+    border: none;
     border-radius: 12px;
-    padding: 10px;
+    padding: 12px;
     margin: 4px 0;
 }
-.control-center-menu .button {
-    background-color: var(--media-background);
-    color: var(--text-primary);
-    border: none;
-    border-radius: 10px;
-    padding: 8px;
+.control-center-menu .section.system-controls {
+    background-color: transparent;
+    padding: 4px 4px 8px 4px;
 }
-.control-center-menu .button:hover {
+.control-center-menu .section.system-controls .button,
+.control-center-menu .section.media .button,
+.control-center-menu .section.sliders .source-selector,
+.control-center-menu .section.sliders .icon,
+.control-center-menu .section.quick-actions .icon,
+.control-center-menu .section.power .icon {
+    font-family: "Segoe Fluent Icons";
+    font-weight: 400;
+    color: var(--accent);
+}
+.control-center-menu .section.system-controls .button {
+    background-color: var(--bar-background);
+    border: none;
+    border-radius: 18px;
+    min-width: 36px;
+    max-width: 36px;
+    min-height: 36px;
+    max-height: 36px;
+    padding: 0;
+    margin: 0 3px;
+    font-size: 16px;
+}
+.control-center-menu .section.system-controls .button:hover {
     background-color: var(--bar-border);
 }
-.control-center-menu .button.active {
+/* Icon tiles and captions have separate surfaces. */
+.control-center-menu .section.quick-actions .button {
+    background-color: transparent;
+    border: none;
+    padding: 0;
+    margin: 4px;
+}
+.control-center-menu .section.quick-actions .button .icon {
+    background-color: var(--media-background);
+    border: 1px solid var(--bar-border);
+    border-radius: 10px;
+    min-height: 46px;
+    font-size: 20px;
+    padding: 0;
+}
+.control-center-menu .section.quick-actions .button .title {
+    color: var(--text-primary);
+    background-color: transparent;
+    font-family: "Segoe UI";
+    font-size: 11px;
+    font-weight: 600;
+    margin: 6px 0 2px 0;
+    padding: 0;
+}
+.control-center-menu .section.quick-actions .button .icon:hover {
+    background-color: var(--bar-border);
+}
+.control-center-menu .section.quick-actions .button.active .icon {
+    background-color: var(--accent);
+    border-color: var(--accent);
+    color: var(--on-accent);
+}
+.control-center-menu .section.quick-actions .button.active .icon:hover {
+    background-color: var(--accent-hover);
+}
+/* Stable row height and reserved width keep percentages aligned. */
+.control-center-menu .section.sliders .slider {
+    min-height: 36px;
+    padding: 0;
+    margin: 2px 0;
+    background-color: transparent;
+}
+.control-center-menu .section.sliders .slider .icon {
+    min-width: 28px;
+    font-size: 17px;
+}
+.control-center-menu .section.sliders .slider .value {
+    min-width: 42px;
+    color: var(--text-primary);
+    font-family: "Consolas";
+    font-size: 12px;
+    padding-left: 8px;
+}
+.control-center-menu .section.sliders .slider .source-selector {
+    min-width: 24px;
+    min-height: 24px;
+    border-radius: 8px;
+    font-size: 12px;
+    margin-left: 4px;
+}
+.control-center-menu .section.sliders .slider .source-selector:hover {
+    background-color: var(--bar-border);
+}
+.control-center-menu .section.power .button {
+    background-color: var(--media-background);
+    border: 1px solid var(--bar-border);
+    border-radius: 10px;
+    min-height: 42px;
+    padding: 8px 10px;
+    margin: 0 3px;
+}
+.control-center-menu .section.power .button:hover {
+    background-color: var(--bar-border);
+}
+.control-center-menu .section.power .title {
+    color: var(--text-secondary);
+    font-family: "Segoe UI";
+    font-size: 11px;
+}
+.control-center-menu .section.power .subtext {
+    color: var(--text-primary);
+    font-family: "Segoe UI";
+    font-size: 12px;
+    font-weight: 600;
+}
+.control-center-menu .section.media .track-info {
+    padding-left: 10px;
+}
+.control-center-menu .section.media .title {
+    color: var(--text-primary);
+    font-family: "Segoe UI";
+    font-size: 13px;
+    font-weight: 600;
+}
+.control-center-menu .section.media .subtext {
+    color: var(--text-secondary);
+    font-family: "Segoe UI";
+    font-size: 11px;
+}
+.control-center-menu .section.media .button {
+    background-color: transparent;
+    border: none;
+    min-width: 28px;
+    max-width: 28px;
+    min-height: 28px;
+    max-height: 28px;
+    padding: 0;
+    margin: 0 2px;
+    border-radius: 14px;
+    font-size: 12px;
+}
+.control-center-menu .section.media .button:hover {
+    background-color: var(--bar-border);
+}
+.control-center-menu .section.media .button.play {
     background-color: var(--accent);
     color: var(--on-accent);
+    min-width: 34px;
+    max-width: 34px;
+    min-height: 34px;
+    max-height: 34px;
+    border-radius: 17px;
 }
-.control-center-menu .icon {
-    font-family: "Segoe Fluent Icons";
-    color: var(--accent);
-    font-size: 18px;
-}
-.control-center-menu .button.active .icon,
-.control-center-menu .button.active .title {
-    color: var(--on-accent);
+.control-center-menu .section.media .button.disabled,
+.control-center-menu .section.quick-actions .button.disabled .icon {
+    color: var(--text-disabled);
+    background-color: var(--media-background);
 }
