@@ -137,10 +137,14 @@ QMenu::separator,
     color: var(--accent);
     background-color: var(--bar-background);
     font-family: "Segoe Fluent Icons";
+    font-size: 11px;
     border-radius: 12px;
     min-width: 24px;
+    max-width: 24px;
     min-height: 24px;
-    padding: 6px;
+    max-height: 24px;
+    padding: 0;
+    margin: 0 3px;
 }
 .media-menu .btn:hover,
 .audio-menu .toggle-apps:hover,

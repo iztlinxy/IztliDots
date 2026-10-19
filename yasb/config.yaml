@@ -226,7 +226,7 @@ widgets:
         thumbnail_corner_radius: 8
         thumbnail_size: 120
         show_source: true
-        show_volume_slider: true
+        show_volume_slider: false
       callbacks:
         on_left: toggle_media_menu
         on_middle: toggle_play_pause
@@ -276,7 +276,7 @@ widgets:
         max_artist_size: 20
         max_source_size: 16
         show_source: true
-        show_volume_slider: true
+        show_volume_slider: false
       scrolling_label:
         enabled: false
         update_interval_ms: 33
