@@ -73,3 +73,90 @@
     selection-background-color: var(--accent);
     selection-color: var(--on-accent);
 }
+
+/* Calendar: large date summary beside a spacious month grid. */
+.clock-popup.calendar {
+    min-width: 480px;
+    padding: 18px;
+    border-radius: 18px;
+    font-family: "Segoe UI";
+}
+.clock-popup.calendar .calendar-table {
+    background-color: var(--bar-background);
+    border-radius: 12px;
+    min-width: 280px;
+    min-height: 248px;
+    padding: 8px;
+    font-family: "Segoe UI";
+    font-size: 13px;
+    outline: none;
+}
+.clock-popup.calendar .calendar-table::item {
+    color: var(--text-primary);
+    background-color: transparent;
+    border: none;
+    padding: 5px;
+}
+.clock-popup.calendar .calendar-table::item:selected {
+    background-color: var(--accent);
+    color: var(--on-accent);
+    font-weight: 700;
+    border-radius: 8px;
+}
+.clock-popup.calendar .day-label,
+.clock-popup.calendar .month-label,
+.clock-popup.calendar .year-label,
+.clock-popup.calendar .date-label {
+    font-family: "Segoe UI";
+    min-width: 140px;
+    max-width: 140px;
+    padding: 0 12px 0 0;
+}
+.clock-popup.calendar .day-label {
+    color: var(--text-primary);
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 16px;
+}
+.clock-popup.calendar .date-label {
+    color: var(--accent);
+    font-size: 72px;
+    font-weight: 700;
+    margin: 0;
+}
+.clock-popup.calendar .month-label {
+    color: var(--text-primary);
+    font-size: 17px;
+    font-weight: 600;
+    margin-top: 4px;
+}
+.clock-popup.calendar .year-label {
+    color: var(--text-secondary);
+    font-size: 13px;
+    font-weight: 400;
+    margin-top: 4px;
+}
+.clock-popup.calendar .week-label,
+.clock-popup.calendar .holiday-label {
+    color: var(--text-secondary);
+    font-family: "Segoe UI";
+    font-size: 11px;
+    padding-top: 6px;
+}
+.clock-popup.calendar QToolButton {
+    color: var(--text-primary);
+    background-color: transparent;
+    border: none;
+    border-radius: 6px;
+    padding: 6px;
+    font-family: "Segoe UI";
+    font-size: 12px;
+}
+.clock-popup.calendar QToolButton:hover {
+    background-color: var(--bar-border);
+    color: var(--accent);
+}
+.clock-popup.calendar QSpinBox {
+    color: var(--accent);
+    padding: 4px;
+}
