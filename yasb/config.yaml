@@ -76,7 +76,7 @@ widgets:
       image_path: 'C:\Users\saura\Pictures\wallpapers'
       change_automatically: false
       run_after:
-        - '"C:\Users\saura\ProjectsIztli\IztliDots\yasb\scripts\.venv\Scripts\python.exe" "C:\Users\saura\ProjectsIztli\IztliDots\yasb\scripts\wallpaper_theme.py" "{image}" --apply'
+        - 'powershell.exe -NoProfile -ExecutionPolicy Bypass -File "C:\Users\saura\ProjectsIztli\IztliDots\yasb\scripts\apply-wallpaper-theme.ps1" "{image}"'
       gallery:
         type: magnified
         image_width: 640
