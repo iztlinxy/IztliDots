@@ -45,8 +45,70 @@ bars:
       - audio_visualizer
       - media_controls
       - notifications
+      right:
+      - systray
+      - wallpapers
+      - volume
+      - window_controls
 
 widgets:
+  systray:
+    type: yasb.systray.SystrayWidget
+    options:
+      class_name: systray
+      label_collapsed: "\ue70d"
+      label_expanded: "\ue70e"
+      icon_size: 18
+      show_unpinned: false
+      show_in_popup: true
+      icons_per_row: 4
+      show_volume: false
+
+  wallpapers:
+    type: yasb.wallpapers.WallpapersWidget
+    options:
+      label: "<span>\ue7aa</span>"
+      image_path: 'C:\Windows\Web\Wallpaper\Windows'
+      change_automatically: false
+      gallery:
+        image_width: 220
+        image_corner_radius: 12
+      callbacks:
+        on_left: toggle_gallery
+        on_right: change_wallpaper
+
+  volume:
+    type: yasb.volume.VolumeWidget
+    options:
+      label: "<span>{icon}</span>{level}"
+      mute_text: "Silencio"
+      icons:
+        muted: "\ue74f"
+        "10": "\ue992"
+        "30": "\ue993"
+        "60": "\ue994"
+        "100": "\ue767"
+      audio_menu:
+        alignment: right
+        direction: down
+        round_corners: true
+      callbacks:
+        on_left: toggle_volume_menu
+        on_right: toggle_mute
+
+  window_controls:
+    type: yasb.window_controls.WindowControlsWidget
+    options:
+      show_app_name: false
+      maximized_only: false
+      monitor_exclusive: true
+      buttons: [minimize, maximize, close]
+      button_labels:
+        minimize: "\ue921"
+        maximize: "\ue922"
+        restore: "\ue923"
+        close: "\ue8bb"
+
   quick_launch:
     type: yasb.quick_launch.QuickLaunchWidget
     options:

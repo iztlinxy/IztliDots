@@ -1,0 +1,14 @@
+.wallpapers-widget {
+    background-color: var(--media-background);
+    border-radius: 20px;
+    margin: 4px 6px 4px 0;
+    padding: 0 12px;
+}
+.wallpapers-widget .icon {
+    font-family: "Segoe Fluent Icons";
+    font-size: 18px;
+    color: var(--accent);
+}
+.wallpapers-widget:hover {
+    background-color: var(--bar-border);
+}

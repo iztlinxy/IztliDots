@@ -1,0 +1,51 @@
+.volume-widget {
+    background-color: var(--media-background);
+    border-radius: 20px;
+    margin: 4px 6px 4px 0;
+    padding: 0 12px;
+}
+.volume-widget .icon {
+    font-family: "Segoe Fluent Icons";
+    font-size: 18px;
+    color: var(--accent);
+    padding-right: 6px;
+}
+.volume-widget .label {
+    color: var(--text-primary);
+    font-family: "Consolas";
+    font-size: 12px;
+}
+.volume-widget .icon.muted,
+.volume-widget .label.muted {
+    color: var(--text-disabled);
+}
+.audio-menu {
+    background-color: var(--media-background);
+    min-width: 280px;
+}
+.audio-menu .device {
+    color: var(--text-primary);
+    padding: 8px;
+    border-radius: 8px;
+}
+.audio-menu .device:hover {
+    background-color: var(--bar-border);
+}
+.audio-menu .device.selected {
+    color: var(--accent);
+}
+.audio-menu .volume-slider::groove:horizontal {
+    background-color: var(--bar-border);
+    height: 4px;
+    border-radius: 2px;
+}
+.audio-menu .volume-slider::sub-page:horizontal {
+    background-color: var(--accent);
+    border-radius: 2px;
+}
+.audio-menu .volume-slider::handle:horizontal {
+    background-color: var(--accent);
+    width: 12px;
+    margin: -4px 0;
+    border-radius: 6px;
+}

@@ -1,0 +1,32 @@
+.systray {
+    background-color: var(--media-background);
+    border-radius: 20px;
+    margin: 4px 6px 4px 0;
+    padding: 0 8px;
+}
+.systray .button,
+.systray .unpinned-visibility-btn {
+    background-color: transparent;
+    border: none;
+    border-radius: 10px;
+    padding: 4px;
+    color: var(--accent);
+    font-family: "Segoe Fluent Icons";
+}
+.systray .button:hover,
+.systray .unpinned-visibility-btn:hover {
+    background-color: var(--bar-border);
+}
+.systray-popup {
+    background-color: var(--media-background);
+    padding: 8px;
+}
+.systray-popup .button {
+    padding: 8px;
+    border: none;
+    border-radius: 8px;
+    background-color: transparent;
+}
+.systray-popup .button:hover {
+    background-color: var(--bar-border);
+}
