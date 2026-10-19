@@ -1,0 +1,14 @@
+.quick-launch-widget {
+    background-color: var(--media-background);
+    border-radius: 20px;
+    margin: 4px 6px 4px 0;
+    padding: 0 12px;
+}
+.quick-launch-widget .icon {
+    font-family: "Segoe Fluent Icons";
+    font-size: 16px;
+    color: var(--accent);
+}
+.quick-launch-widget:hover {
+    background-color: var(--bar-border);
+}

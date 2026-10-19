@@ -1,0 +1,17 @@
+.active-window-widget {
+    background-color: var(--media-background);
+    border-radius: 20px;
+    margin: 4px 0;
+    padding: 0 12px;
+}
+.active-window-widget .label {
+    color: var(--text-primary);
+    font-family: "Consolas";
+    font-size: 12px;
+    font-weight: 600;
+    padding: 0 0 0 6px;
+    max-width: 220px;
+}
+.active-window-widget .label.alt {
+    color: var(--accent);
+}

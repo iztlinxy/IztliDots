@@ -1,10 +1,11 @@
 .clock-widget {
-    padding: 0 22px 0 12px;
-    margin: 0;
-    background-color: transparent;
+    padding: 0 14px;
+    margin: 4px 8px 4px 0;
+    background-color: var(--media-background);
+    border-radius: 20px;
 }
 .clock-widget .label {
-    color: #ffc04d;
+    color: var(--accent);
     font-family: "Consolas";
     font-size: 18px;
     font-weight: 700;

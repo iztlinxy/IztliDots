@@ -9,7 +9,7 @@ update_check: true
 bars:
   primary-bar:
     enabled: true
-    style: "bar"
+    style: "adaptive"
     screens:
     - '*'
     class_name: yasb-bar
@@ -36,6 +36,8 @@ bars:
     widgets:
       left:
       - home
+      - quick_launch
+      - active_window
       center:
       - clock
       - media_art
@@ -45,6 +47,29 @@ bars:
       - notifications
 
 widgets:
+  quick_launch:
+    type: yasb.quick_launch.QuickLaunchWidget
+    options:
+      label: "<span>\ue721</span>"
+      search_placeholder: "Buscar aplicaciones..."
+      show_icons: true
+      callbacks:
+        on_left: toggle_quick_launch
+
+  active_window:
+    type: yasb.active_window.ActiveWindowWidget
+    options:
+      label: "{win[title]}"
+      label_alt: "{win[process][name]}"
+      label_no_window: "Escritorio"
+      label_icon: true
+      label_icon_size: 18
+      max_length: 30
+      max_length_ellipsis: "…"
+      monitor_exclusive: true
+      callbacks:
+        on_left: toggle_label
+
   home:
     type: yasb.home.HomeWidget
     options:

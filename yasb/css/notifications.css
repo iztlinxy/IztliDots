@@ -1,19 +1,21 @@
 .notification-widget {
-    background-color: transparent;
-    padding: 0 10px 0 18px;
+    background-color: var(--media-background);
+    border-radius: 20px;
+    margin: 4px 0 4px 8px;
+    padding: 0 12px;
 }
 .notification-widget .icon {
     font-family: "Segoe Fluent Icons";
     font-size: 20px;
-    color: #eee8dc;
+    color: var(--accent);
     padding: 0 3px 0 0;
 }
 .notification-widget .label {
     font-family: "Consolas";
     font-size: 10px;
     font-weight: 700;
-    color: #302923;
-    background-color: #f2c8b9;
+    color: var(--badge-text);
+    background-color: var(--badge-background);
     border-radius: 7px;
     min-width: 16px;
     max-height: 14px;

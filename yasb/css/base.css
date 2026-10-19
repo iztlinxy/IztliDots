@@ -1,3 +1,6 @@
-@import "yasb_colors.css";
-
-/* Base utility styles */
+/* Shared typography; each widget retains its own sizing and layout. */
+.widget .label {
+    font-family: "Consolas";
+    font-size: 12px;
+    color: var(--text-primary);
+}

@@ -1,6 +1,10 @@
+/* Central stylesheet entry point: palette, shared styles, then widgets. */
+@import "css/root.css";
 @import "css/base.css";
 @import "css/bar.css";
 @import "css/home.css";
+@import "css/quick_launch.css";
+@import "css/active_window.css";
 @import "css/clock.css";
 @import "css/media.css";
 @import "css/audio_visualizer.css";

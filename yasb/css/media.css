@@ -1,6 +1,6 @@
 /* Circular cover, followed by the text and playback capsule. */
 .media-widget.cover-art {
-    background-color: #292a27;
+    background-color: var(--media-background);
     border-top-left-radius: 23px;
     border-bottom-left-radius: 23px;
     margin: 4px 0;
@@ -16,26 +16,26 @@
     color: transparent;
 }
 .media-widget.now-playing {
-    background-color: #292a27;
+    background-color: var(--media-background);
     padding: 0 2px;
     margin: 4px 0;
 }
 .media-widget.playback-controls {
-    background-color: #292a27;
+    background-color: var(--media-background);
     border-top-right-radius: 23px;
     border-bottom-right-radius: 23px;
     padding: 0 12px 0 2px;
     margin: 4px 0;
 }
 .media-widget.now-playing .label {
-    color: #eee8dc;
+    color: var(--text-primary);
     font-family: "Consolas";
     font-size: 12px;
     padding: 0 10px 0 0;
     min-width: 182px;
 }
 .media-widget.playback-controls .btn {
-    color: #d5d1c5;
+    color: var(--text-controls);
     font-family: "Segoe Fluent Icons";
     font-size: 10px;
     background-color: transparent;
@@ -46,11 +46,11 @@
     margin: 0 3px;
 }
 .media-widget.playback-controls .btn:hover {
-    color: #ffc04d;
+    color: var(--accent);
 }
 .media-widget.playback-controls .btn.play {
-    color: #30281c;
-    background-color: #ffc04d;
+    color: var(--on-accent);
+    background-color: var(--accent);
     font-size: 14px;
     min-width: 32px;
     max-width: 32px;
@@ -61,9 +61,9 @@
     margin: 0 6px;
 }
 .media-widget.playback-controls .btn.play:hover {
-    background-color: #ffd27b;
-    color: #30281c;
+    background-color: var(--accent-hover);
+    color: var(--on-accent);
 }
 .media-widget.playback-controls .btn.disabled {
-    color: #68685f;
+    color: var(--text-disabled);
 }
