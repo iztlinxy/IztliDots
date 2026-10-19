@@ -123,12 +123,14 @@ QMenu::separator,
 }
 /* Media details and app volume controls. */
 .media-menu .title {
+    padding: 4px 12px 6px 12px;
     color: var(--text-primary);
     font-size: 15px;
     font-weight: 700;
 }
 .media-menu .artist,
 .media-menu .source {
+    padding: 2px 12px 6px 12px;
     color: var(--text-secondary);
 }
 .media-menu .btn {

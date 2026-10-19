@@ -217,6 +217,16 @@ widgets:
       thumbnail_corner_radius: 18
       symmetric_corner_radius: true
       thumbnail_edge_fade: false
+      # Open below the cover instead of using the default right alignment.
+      media_menu:
+        alignment: left
+        direction: down
+        offset_top: 6
+        offset_left: 0
+        thumbnail_corner_radius: 8
+        thumbnail_size: 120
+        show_source: true
+        show_volume_slider: true
       callbacks:
         on_left: toggle_media_menu
         on_middle: toggle_play_pause
@@ -248,7 +258,7 @@ widgets:
         play: "\ue768"
         pause: "\ue769"
       callbacks:
-        on_left: "toggle_label"
+        on_left: "toggle_media_menu"
         on_middle: "toggle_play_pause"
         on_right: "toggle_media_menu"
       media_menu:
@@ -258,7 +268,7 @@ widgets:
         border_color: "#ffc04d"
         alignment: center
         direction: down
-        offset_top: 8
+        offset_top: 6
         offset_left: 0
         thumbnail_corner_radius: 8
         thumbnail_size: 120

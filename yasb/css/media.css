@@ -31,7 +31,7 @@
     color: var(--text-primary);
     font-family: "Consolas";
     font-size: 12px;
-    padding: 0 10px 0 0;
+    padding: 2px 12px 2px 6px;
     min-width: 182px;
 }
 .media-widget.playback-controls .btn {
