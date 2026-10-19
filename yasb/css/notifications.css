@@ -1,6 +1,6 @@
 .notification-widget {
     /* Only the bell has a background; the badge sits outside it. */
-    background-color: transparent;
+    background-color: var(--transparent);
     margin: 4px 0 4px 8px;
     padding: 0;
 }

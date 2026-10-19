@@ -24,11 +24,11 @@
 
 .clock-popup QLabel {
     color: var(--text-primary);
-    background-color: transparent;
+    background-color: var(--transparent);
 }
 
 .clock-popup .calendar-table {
-    background-color: transparent;
+    background-color: var(--transparent);
     color: var(--text-primary);
     border: none;
     selection-background-color: var(--accent);
@@ -103,7 +103,7 @@
 }
 .clock-popup.calendar .calendar-table::item {
     color: var(--text-primary);
-    background-color: transparent;
+    background-color: var(--transparent);
     border: none;
     padding: 0;
 }
@@ -155,7 +155,7 @@
 }
 .clock-popup.calendar QToolButton {
     color: var(--text-primary);
-    background-color: transparent;
+    background-color: var(--transparent);
     border: none;
     border-radius: 6px;
     padding: 6px;

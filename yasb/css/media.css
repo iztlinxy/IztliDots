@@ -13,7 +13,7 @@
     max-height: 36px;
     padding: 0;
     margin: 0;
-    color: transparent;
+    color: var(--transparent);
 }
 .media-widget.now-playing {
     background-color: var(--media-background);
@@ -38,7 +38,7 @@
     color: var(--text-controls);
     font-family: "Segoe Fluent Icons";
     font-size: 10px;
-    background-color: transparent;
+    background-color: var(--transparent);
     border: none;
     min-width: 18px;
     max-width: 18px;
@@ -81,7 +81,7 @@
 
 .media-menu QLabel {
     color: var(--text-primary);
-    background-color: transparent;
+    background-color: var(--transparent);
 }
 
 .media-menu .title {

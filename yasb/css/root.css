@@ -1,15 +1,16 @@
-/* Theme palette. Imported before all widget styles in styles.css. */
+/* Generated from wallpaper. */
 :root {
-    --bar-background: #30312c;
-    --bar-border: #46463b;
-    --media-background: #292a27;
-    --text-primary: #eee8dc;
-    --text-secondary: #99968b;
-    --text-controls: #d5d1c5;
-    --text-disabled: #68685f;
-    --accent: #ffc04d;
-    --accent-hover: #ffd27b;
-    --on-accent: #30281c;
-    --badge-background: #f2c8b9;
-    --badge-text: #302923;
+    --bar-background: #2a1d21;
+    --bar-border: #48393e;
+    --media-background: #1f1719;
+    --text-primary: #f1eeef;
+    --text-secondary: #b39ea4;
+    --text-controls: #e5dee0;
+    --text-disabled: #6c5d61;
+    --accent: #ec6992;
+    --accent-hover: #ef81a3;
+    --on-accent: #141414;
+    --badge-background: #d9bac4;
+    --badge-text: #141414;
+    --transparent: transparent;
 }

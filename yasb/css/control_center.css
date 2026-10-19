@@ -11,7 +11,7 @@
 
 .control-center-menu QLabel {
     color: var(--text-primary);
-    background-color: transparent;
+    background-color: var(--transparent);
 }
 
 .control-center-menu QSlider::groove:horizontal {
@@ -63,7 +63,7 @@
     margin: 4px 0;
 }
 .control-center-menu .section.system-controls {
-    background-color: transparent;
+    background-color: var(--transparent);
     padding: 4px 4px 8px 4px;
 }
 .control-center-menu .section.system-controls .button,
@@ -93,7 +93,7 @@
 }
 /* Icon tiles and captions have separate surfaces. */
 .control-center-menu .section.quick-actions .button {
-    background-color: transparent;
+    background-color: var(--transparent);
     border: none;
     padding: 0;
     margin: 4px;
@@ -108,7 +108,7 @@
 }
 .control-center-menu .section.quick-actions .button .title {
     color: var(--text-primary);
-    background-color: transparent;
+    background-color: var(--transparent);
     font-family: "Segoe UI";
     font-size: 11px;
     font-weight: 600;
@@ -131,7 +131,7 @@
     min-height: 36px;
     padding: 0;
     margin: 2px 0;
-    background-color: transparent;
+    background-color: var(--transparent);
 }
 .control-center-menu .section.sliders .slider .icon {
     min-width: 28px;
@@ -191,7 +191,7 @@
     font-size: 11px;
 }
 .control-center-menu .section.media .button {
-    background-color: transparent;
+    background-color: var(--transparent);
     border: none;
     min-width: 28px;
     max-width: 28px;

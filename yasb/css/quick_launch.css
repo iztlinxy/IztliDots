@@ -24,10 +24,10 @@
 }
 .quick-launch-popup QLabel {
     color: var(--text-primary);
-    background-color: transparent;
+    background-color: var(--transparent);
 }
 .quick-launch-popup .search {
-    background-color: transparent;
+    background-color: var(--transparent);
     border: none;
     border-bottom: 1px solid var(--bar-border);
     border-radius: 0;
@@ -38,7 +38,7 @@
     font-size: 16px;
 }
 .quick-launch-popup .search .search-input {
-    background-color: transparent;
+    background-color: var(--transparent);
     color: var(--text-primary);
     border: none;
     font-family: "Segoe UI";
@@ -48,11 +48,11 @@
     selection-color: var(--on-accent);
 }
 .quick-launch-popup .results {
-    background-color: transparent;
+    background-color: var(--transparent);
     padding: 6px 0;
 }
 .quick-launch-popup .results-list-view {
-    background-color: transparent;
+    background-color: var(--transparent);
     color: var(--text-primary);
     border: none;
     outline: none;
@@ -81,17 +81,17 @@
     font-weight: 400;
 }
 .quick-launch-popup .prefix {
-    background-color: transparent;
+    background-color: var(--transparent);
     color: var(--accent);
     border: none;
     padding: 2px 6px;
 }
 .quick-launch-popup .preview {
-    background-color: transparent;
+    background-color: var(--transparent);
     border-left: 1px solid var(--bar-border);
 }
 .quick-launch-popup .preview-text {
-    background-color: transparent;
+    background-color: var(--transparent);
     color: var(--text-primary);
     border: none;
     padding: 8px 12px;

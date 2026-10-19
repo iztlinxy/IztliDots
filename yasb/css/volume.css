@@ -63,7 +63,7 @@
 
 .audio-menu QLabel {
     color: var(--text-primary);
-    background-color: transparent;
+    background-color: var(--transparent);
 }
 
 .audio-menu .toggle-apps:hover,
@@ -73,7 +73,7 @@
 
 .audio-menu .toggle-apps {
     color: var(--accent);
-    background-color: transparent;
+    background-color: var(--transparent);
     padding: 8px;
     border-radius: 8px;
 }
