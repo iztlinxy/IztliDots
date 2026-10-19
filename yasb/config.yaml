@@ -49,7 +49,7 @@ bars:
       - systray
       - wallpapers
       - volume
-      - window_controls
+      - control_center
 
 widgets:
   systray:
@@ -73,6 +73,7 @@ widgets:
       gallery:
         image_width: 220
         image_corner_radius: 12
+        accent_color: "#ffc04d"
       callbacks:
         on_left: toggle_gallery
         on_right: change_wallpaper
@@ -96,18 +97,19 @@ widgets:
         on_left: toggle_volume_menu
         on_right: toggle_mute
 
-  window_controls:
-    type: yasb.window_controls.WindowControlsWidget
+  control_center:
+    type: yasb.control_center.ControlCenterWidget
     options:
-      show_app_name: false
-      maximized_only: false
-      monitor_exclusive: true
-      buttons: [minimize, maximize, close]
-      button_labels:
-        minimize: "\ue921"
-        maximize: "\ue922"
-        restore: "\ue923"
-        close: "\ue8bb"
+      label: "<span>\ue713</span>"
+      tooltip: true
+      popup:
+        alignment: right
+        direction: down
+        blur: false
+        round_corners: true
+        offset_top: 8
+      callbacks:
+        on_left: toggle_menu
 
   quick_launch:
     type: yasb.quick_launch.QuickLaunchWidget
