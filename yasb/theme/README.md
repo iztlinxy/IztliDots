@@ -63,6 +63,8 @@ contraste. Los originales de los wallpapers nunca se modifican.
 - Un bloqueo de Windows serializa escritura y respaldo. Una revisión por solicitud
   impide que una extracción antigua sobrescriba una actualización más reciente.
   El orden se determina al iniciar los procesos, no al hacer clic en la galería.
+  Se usa la espera nativa de Windows (hasta 10 segundos); si se agota, la ejecución
+  falla sin escribir. Para cargas que excedan ese límite se necesitaría una cola.
 - Una paleta idéntica no reescribe el CSS ni sustituye el respaldo.
 - YASB tiene `watch_stylesheet: true`; al aplicar se recarga la paleta CSS.
 
@@ -79,9 +81,7 @@ configuración al cambiar el fondo, para evitar recargas completas de los widget
 ./scripts/.venv/Scripts/python.exe -m unittest discover -s scripts -p 'test_*.py'
 ```
 
-Las pruebas comprueban las 12 variables y su contraste, extracción de una imagen,
-vista previa sin escritura, aplicación, respaldo, restauración y rechazo de
-imágenes inexistentes o totalmente transparentes. También cubren tonos grises,
-selección ponderada del acento, procesos simultáneos, resultados antiguos,
-configuración inválida y fallos de escritura. Usan archivos temporales;
-no cambian el tema activo.
+Una sola prueba de integración recorre vista previa, aplicación, las 12 variables,
+reaplicación sin perder el respaldo, restauración y rechazo de imágenes ausentes
+o corruptas. Usa una ruta con espacios y archivos temporales; no cambia el tema
+activo. No cubre la interfaz de YASB ni carreras entre procesos.

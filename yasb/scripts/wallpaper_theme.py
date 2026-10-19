@@ -2,8 +2,8 @@
 
 import argparse
 import colorsys
-from contextlib import contextmanager
 import json
+import msvcrt
 import os
 from pathlib import Path
 import re
@@ -108,23 +108,16 @@ def atomic_write(path, content):
         with os.fdopen(descriptor, "w", encoding="utf-8", newline="\n") as stream:
             stream.write(content)
         os.replace(temporary, path)
+        # YASB watches modifications, not atomic replacements.
+        os.utime(path, None)
     finally:
         Path(temporary).unlink(missing_ok=True)
-
-
-def publish_css(path, content):
-    atomic_write(path, content)
-    # YASB handles modified events, not the rename emitted by os.replace.
-    # Notify only after the complete stylesheet is in place.
-    os.utime(path, None)
 
 
 def read_settings(path):
     settings = json.loads(path.read_text(encoding="utf-8-sig"))
     if not isinstance(settings, dict):
         raise ValueError("La configuración debe ser un objeto JSON")
-    if settings.get("mode", "dark") != "dark":
-        raise ValueError("Solo se admite el modo dark")
     for name, low, high in (("sample_size", 16, 512), ("palette_size", 2, 64)):
         value = settings[name]
         if type(value) is not int or not low <= value <= high:
@@ -139,36 +132,17 @@ def read_settings(path):
     return settings
 
 
-@contextmanager
-def output_lock(path):
-    import msvcrt
-
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("a+b") as stream:
-        if stream.tell() == 0:
-            stream.write(b"0")
-            stream.flush()
-        deadline = time.monotonic() + 30
-        while True:
-            stream.seek(0)
-            try:
-                msvcrt.locking(stream.fileno(), msvcrt.LK_NBLCK, 1)
-                break
-            except OSError:
-                if time.monotonic() >= deadline:
-                    raise TimeoutError("Otra actualización mantiene bloqueada la paleta")
-                time.sleep(0.05)
-        try:
-            yield
-        finally:
-            stream.seek(0)
-            msvcrt.locking(stream.fileno(), msvcrt.LK_UNLCK, 1)
-
-
 def apply_theme(settings, css, request, restore=False):
     output, backup = settings["output_css"], settings["backup_css"]
     revision = backup.with_suffix(".revision")
-    with output_lock(backup.with_suffix(".lock")):
+    backup.parent.mkdir(parents=True, exist_ok=True)
+    with backup.with_suffix(".lock").open("a+b") as lock:
+        if lock.tell() == 0:
+            lock.write(b"0")
+            lock.flush()
+        lock.seek(0)
+        # shortcut: Windows waits up to 10s; use a worker queue if updates exceed that.
+        msvcrt.locking(lock.fileno(), msvcrt.LK_LOCK, 1)
         if revision.exists() and request < int(revision.read_text()):
             return "Actualización anterior descartada"
         if restore:
@@ -177,7 +151,7 @@ def apply_theme(settings, css, request, restore=False):
         if previous != css:
             if previous is not None and not restore:
                 atomic_write(backup, previous)
-            publish_css(output, css)
+            atomic_write(output, css)
         else:
             os.utime(output, None)
         atomic_write(revision, str(request))
@@ -185,6 +159,7 @@ def apply_theme(settings, css, request, restore=False):
 
 
 def main():
+    # shortcut: process start defines order; pass widget sequence IDs if click order is needed.
     request = time.time_ns()
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("image", type=Path, nargs="?")
