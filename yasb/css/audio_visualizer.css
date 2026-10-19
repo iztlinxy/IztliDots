@@ -1,0 +1,13 @@
+/* Native WASAPI spectrum between the song label and playback controls. */
+.audio-visualizer-widget {
+    background-color: #292a27;
+    margin: 4px 0;
+    padding: 0 8px 0 2px;
+}
+.audio-visualizer-widget .widget-container {
+    margin: 0;
+    padding: 0;
+}
+.audio-visualizer-widget .audio-visualizer-canvas {
+    -qproperty-fillbrush: #ffc04d;
+}

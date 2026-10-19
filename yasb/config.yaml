@@ -40,6 +40,8 @@ bars:
       - clock
       - media_art
       - media
+      - audio_visualizer
+      - media_controls
       - notifications
 
 widgets:
@@ -98,7 +100,7 @@ widgets:
   media:
     type: yasb.media.MediaWidget
     options:
-      label: '<table cellspacing="0" cellpadding="0"><tr><td align="left"><b>{title}</b></td><td rowspan="2" style="color:#ffc04d; padding-left:12px;">·····</td></tr><tr><td align="left"><span style="color:#99968b; font-size:10px;">{artist}</span></td></tr></table>'
+      label: '<table cellspacing="0" cellpadding="0"><tr><td align="left"><b>{title}</b></td></tr><tr><td align="left"><span style="color:#99968b; font-size:10px;">{artist}</span></td></tr></table>'
       label_alt: "{artist}"
       separator: " - "
       hide_empty: true
@@ -110,7 +112,7 @@ widgets:
       show_thumbnail: false
       controls_only: false
       controls_left: false
-      controls_hide: false
+      controls_hide: true
       thumbnail_alpha: 100
       thumbnail_padding: 8
       thumbnail_corner_radius: 50
@@ -150,6 +152,37 @@ widgets:
         always_scroll: false
       progress_bar:
         enabled: false
+
+  audio_visualizer:
+    type: yasb.audio_visualizer.AudioVisualizerWidget
+    options:
+      style: bars
+      height: 16
+      smoothness: 70
+      sensitivity: 50
+      auto_gain: true
+      framerate: 30
+      hide_idle: true
+      hide_idle_after: 2000
+      bars:
+        count: 8
+        width: 2
+        gap: 2
+
+  # Separate controls so the visualizer sits after the title and before buttons.
+  media_controls:
+    type: yasb.media.MediaWidget
+    options:
+      class_name: "playback-controls"
+      hide_empty: true
+      controls_only: true
+      controls_hide: false
+      show_thumbnail: false
+      icons:
+        prev_track: "\ue892"
+        next_track: "\ue893"
+        play: "\ue768"
+        pause: "\ue769"
 
   notifications:
     type: yasb.notifications.NotificationsWidget
