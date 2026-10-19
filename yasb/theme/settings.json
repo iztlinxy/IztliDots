@@ -1,0 +1,8 @@
+{
+  "mode": "dark",
+  "sample_size": 160,
+  "palette_size": 12,
+  "fixed_accent": null,
+  "output_css": "../css/root.css",
+  "backup_css": "state/root.previous.css"
+}
