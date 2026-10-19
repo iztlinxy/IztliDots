@@ -107,6 +107,13 @@ def atomic_write(path, content):
         Path(temporary).unlink(missing_ok=True)
 
 
+def publish_css(path, content):
+    atomic_write(path, content)
+    # YASB handles modified events, not the rename emitted by os.replace.
+    # Notify only after the complete stylesheet is in place.
+    os.utime(path, None)
+
+
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("image", type=Path, nargs="?")
@@ -130,7 +137,7 @@ def main():
         if output == backup:
             raise ValueError("La salida y su respaldo deben ser archivos distintos")
         if args.restore:
-            atomic_write(output, backup.read_text(encoding="utf-8-sig"))
+            publish_css(output, backup.read_text(encoding="utf-8-sig"))
             print(f"Restaurado: {output}")
             return
         if args.image is None:
@@ -140,10 +147,11 @@ def main():
             if output.exists():
                 previous = output.read_text(encoding="utf-8-sig")
                 if previous == css:
+                    os.utime(output, None)
                     print("La paleta no cambió")
                     return
                 atomic_write(backup, previous)
-            atomic_write(output, css)
+            publish_css(output, css)
             print(f"Actualizado: {output}")
         else:
             print(css, end="")

@@ -44,6 +44,9 @@ contraste. Los originales de los wallpapers nunca se modifican.
 ## Alcance de esta primera versión
 
 - Vista previa por defecto; escritura atómica y respaldo al usar `--apply`.
+- Tras reemplazar el CSS se actualiza su fecha de modificación para que el
+  observador de YASB reciba un evento `modified`. También se notifica al restaurar
+  o volver a aplicar la misma paleta; no hace falta guardar manualmente el CSS.
 - Textos principales y acentos ajustados para contraste sobre el fondo oscuro.
 - `config.yaml` conecta `run_after` de Wallpapers con el Python de `scripts/.venv`.
   Cada cambio desde el widget pasa `{image}` al generador con `--apply`.
