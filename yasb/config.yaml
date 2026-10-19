@@ -71,7 +71,9 @@ widgets:
       image_path: 'C:\Users\saura\Pictures\wallpapers'
       change_automatically: false
       gallery:
-        image_width: 360
+        type: magnified
+        image_width: 640
+        orientation: landscape
         image_corner_radius: 12
         accent_color: "#ffc04d"
       callbacks:
